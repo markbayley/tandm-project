@@ -8,6 +8,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import { UserAuthContextProvider } from "./context/UserAuthContext";
 import Navbar from "./components/Navbar";
 import DocumentManager from "./pages/DocumentManager";
+import DocumentViewer from "./pages/DocumentViewer";
 
 function App() {
   return (
@@ -25,8 +26,8 @@ function App() {
           />
               <Route path="/" element={<Home />} />
           <Route path="/signup" element={<Signup />} />
-          {/* <Route path="/" element={<Login />} />
-          <Route path="/signup" element={<Signup />} /> */}
+           <Route path="/viewer" element={<DocumentViewer />} />
+        
         </Routes>
       </UserAuthContextProvider>
     </>

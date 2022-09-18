@@ -4,7 +4,6 @@ import DocumentList from '../components/DocumentList'
 const DocumentManager = () => {
   return (
     <>
- 
     <DocumentList />
     </>
   )

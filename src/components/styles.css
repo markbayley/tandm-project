@@ -1,0 +1,72 @@
+@import url("https://rsms.me/inter/inter.css");
+
+/* html, */
+/* body {
+  margin: 0;
+  padding: 0;
+  background: #272730;
+  overflow: hidden;
+} */
+
+/* body {
+  font-family: "Inter var", sans-serif;
+  font-size: 14px;
+  color: white;
+  background: #272730;
+}  */
+/* #root {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}  */
+
+canvas {
+  position: absolute;
+}
+
+.content {
+  /* padding-top: 10px; */
+  transform: translate3d(50%, 0, 0);
+  text-align: left;
+  background: #202035;
+  color: white;
+  /* padding: 25px 25px; */
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+p {
+  text-align: center;
+
+  font-family: sans-serif;
+  pointer-events: none;
+  /* background: #818193; */
+
+  color: white;
+  padding: 5px;
+  border-radius: 50%;
+  font-size: 15px;
+  border: 1px solid white;
+  height: 35px;
+  width: 35px;
+ 
+ 
+}
+
+img {
+  border: 5px solid #333867;
+  transition: ease-in 0.5s;
+  /* -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+   -ms-filter: grayscale(100%);
+       filter: grayscale(100%) */
+}
+
+img:hover {
+  border: 3px solid goldenrod;
+  border-radius: 5px;
+  transition: ease-in 0.5s;
+}

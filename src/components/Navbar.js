@@ -30,9 +30,9 @@ function NavScrollExample() {
   const handleShow = () => setShow(true);
 
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar style={{borderBottom: "1px solid #17193b"}}expand="lg"  fixed="top">
       <Container fluid >
-        <Navbar.Brand href="/"><HouseFill color="black" size={24} className="mb-1"/>Tandm.</Navbar.Brand>
+        <Navbar.Brand href="/" style={{color: "#007bff"}}><HouseFill  size={24} className="mb-2"/>Tandm.</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -45,13 +45,13 @@ function NavScrollExample() {
             {user ? <Nav.Link href="/dashboard" >Dashboard</Nav.Link> : ""}
           
               <NavDropdown title="Products" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+                <NavDropdown.Item href="#action3">CAD Design</NavDropdown.Item>
                 <NavDropdown.Item href="#action4">
-                  Another action
+                  Building Software
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action5">
-                  Something else here
+                  Get A Quote
                 </NavDropdown.Item>
               </NavDropdown>
          
@@ -87,22 +87,22 @@ function NavScrollExample() {
           <Nav.Link href="/contact" >Contact</Nav.Link> 
             {user ? (
               <NavDropdown
-                title="Settings"
+                title="Profile"
                 id="navbarScrollingDropdown"
                 align="end"
               >
-                <NavDropdown.Item onClick={handleLogout}>
-                  Sign Out
+                <NavDropdown.Item >
+                Messages
                 </NavDropdown.Item>
                 <NavDropdown.Item href="#action4">Settings</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">Profile</NavDropdown.Item>
+                <NavDropdown.Item onClick={handleLogout}>Sign Out</NavDropdown.Item>
               </NavDropdown>
             ) : (
               <Nav.Link onClick={handleShow}>Login</Nav.Link>
             )}
             {user ? (
-              <Nav.Link>
+              <Nav.Link className="mt-0 pt-1">
                 <Image
                   className="thumbnail-image"
                   src="/avatar.png"
