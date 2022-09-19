@@ -52,7 +52,7 @@ const Login = ({handleClose}) => {
         </Form>
     
       </div>
-      <div className="p-4 box mt-3 text-center">
+      <div className="p-3 box mt-0 text-center">
         No account? <Link to="/signup">Sign up</Link>
       </div>
     </>

@@ -44,6 +44,15 @@ body {
   position: relative; */
 }
 
+.navbar{
+  background-color: transparent;
+}
+
+.navbar.colorChange{
+  background-color: #333867;
+  transition: ease 0.1s;
+}
+
 tbody>tr>:nth-child(3){
   color: grey;
 
@@ -105,6 +114,23 @@ th {
 
 .btn-danger {
   background-color: #e34922 !important;
+}
+
+div.modal-body {
+  background-color: #333867 !important;
+}
+
+.modal-header {
+  background-color: #333867 !important;
+}
+
+.modal-content {
+  width: 99% !important;
+  color: white;
+}
+
+.btn-close {
+  /* color: white !important; */
 }
 
  

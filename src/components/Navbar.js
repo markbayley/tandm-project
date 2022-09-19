@@ -29,8 +29,19 @@ function NavScrollExample() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const [colorChange, setColorchange] = useState(false);
+  const changeNavbarColor = () =>{
+     if(window.scrollY >= 80){
+       setColorchange(true);
+     }
+     else{
+       setColorchange(false);
+     }
+  };
+  window.addEventListener('scroll', changeNavbarColor);
+
   return (
-    <Navbar style={{borderBottom: "1px solid #17193b"}}expand="lg"  fixed="top">
+    <Navbar style={{borderBottom: ""}}expand="lg"  fixed="top"  className={colorChange ? 'navbar colorChange' : 'navbar'}>
       <Container fluid >
         <Navbar.Brand href="/" style={{color: "#007bff"}}><HouseFill  size={24} className="mb-2"/>Tandm.</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -69,9 +80,10 @@ function NavScrollExample() {
 
           <Modal show={show} onHide={handleClose} size="sm">
             <Modal.Header closeButton>
-              {/* <Modal.Title>Modal heading</Modal.Title> */}
+              <Modal.Title> <Navbar.Brand href="/" style={{color: "#007bff"}}><HouseFill  size={24} className="mb-2"/>Tandm.</Navbar.Brand></Modal.Title>
             </Modal.Header>
             <Modal.Body>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Already have an account?
               <Login handleClose={handleClose} />
             </Modal.Body>
             {/* <Modal.Footer>
