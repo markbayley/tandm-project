@@ -55,14 +55,22 @@ p {
  
 }
 
-img {
-  border: 5px solid #333867;
+.thumbnail-image {
+  padding: 0px !important;
+ 
+  /* border: 5px solid #333867; */
   transition: ease-in 0.5s;
-  /* -webkit-filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
     -o-filter: grayscale(100%);
    -ms-filter: grayscale(100%);
-       filter: grayscale(100%) */
+       filter: grayscale(100%);
+      
+}
+
+.profile-image {
+  border: 2px solid grey;
+  border-radius: 50%;
 }
 
 img:hover {

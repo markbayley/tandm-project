@@ -11,7 +11,7 @@ import { useNavigate } from "react-router";
 import { useUserAuth } from "../context/UserAuthContext";
 import Image from "react-bootstrap/Image";
 import Nav from "react-bootstrap/Nav";
-import { HouseFill } from 'react-bootstrap-icons';
+import { HouseFill, Envelope, Gear } from 'react-bootstrap-icons';
 
 function NavScrollExample() {
   const { logOut, user } = useUserAuth();
@@ -53,7 +53,15 @@ function NavScrollExample() {
           >
             {/* <Nav.Link href="/" ><HouseFill color="black" size={24} className="pb-1"/></Nav.Link> */}
 
-            {user ? <Nav.Link href="/dashboard" >Dashboard</Nav.Link> : ""}
+            {user ? 
+
+            <>
+            <Nav.Link href="/dashboard" >Dashboard</Nav.Link>
+            <Nav.Link href="/viewer" >CAD Viewer</Nav.Link> 
+            </>
+            : ""}
+
+            { !user ?
           
               <NavDropdown title="Products" id="navbarScrollingDropdown">
                 <NavDropdown.Item href="#action3">CAD Design</NavDropdown.Item>
@@ -65,7 +73,22 @@ function NavScrollExample() {
                   Get A Quote
                 </NavDropdown.Item>
               </NavDropdown>
-         
+              : " "}
+{ !user ? 
+              <NavDropdown title="People" id="navbarScrollingDropdown">
+                <NavDropdown.Item href="#action3">
+                  About Us</NavDropdown.Item>
+                <NavDropdown.Item href="#action4">
+                  Team
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action5">
+                  Company Profile
+                </NavDropdown.Item>
+              </NavDropdown>
+
+              : " "
+            }         
           </Nav>
 
           {/* <Form className="d-flex">
@@ -96,27 +119,31 @@ function NavScrollExample() {
         </Modal.Footer> */}
           </Modal>
           <Nav>
-          <Nav.Link href="/contact" >Contact</Nav.Link> 
+        
             {user ? (
               <NavDropdown
                 title="Profile"
                 id="navbarScrollingDropdown"
                 align="end"
+             
               >
-                <NavDropdown.Item >
-                Messages
+                <NavDropdown.Item   >
+                <Envelope  size={20} className="mb-2"/> Messages 
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action4">Settings</NavDropdown.Item>
+                <NavDropdown.Item href="#action4"><Gear size={20} className="mb-2"/> Settings </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item onClick={handleLogout}>Sign Out</NavDropdown.Item>
               </NavDropdown>
             ) : (
+              <>
+              <Nav.Link href="/contact" >Contact</Nav.Link> 
               <Nav.Link onClick={handleShow}>Login</Nav.Link>
+              </>
             )}
             {user ? (
               <Nav.Link className="mt-0 pt-1">
                 <Image
-                  className="thumbnail-image"
+                  className="profile-image"
                   src="/avatar.png"
                   alt="Profile"
                   height="30px"

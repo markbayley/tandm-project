@@ -93,7 +93,7 @@ const shortContent = (
 export default function Square() {
   return (
     <div>
-      <Canvas style={{ height: "80vh", width: "70vw", cursor: "move" }}>
+      <Canvas style={{ height: "77vh", cursor: "move" }}>
        
         {/*
            A group is used for grouping, kind og like
@@ -154,7 +154,7 @@ function GreenSquare() {
         The material gives a mesh its texture or look.
         In this case, it is just a uniform green
       */}
-      <meshBasicMaterial color="#156289" side={DoubleSide} />
+      <meshBasicMaterial color="#474d84" side={DoubleSide} />
     </mesh>
   );
 }

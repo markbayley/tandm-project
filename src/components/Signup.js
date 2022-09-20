@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Form, Alert } from "react-bootstrap";
+import { Form, Alert, Container, Row, Col } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import { useUserAuth } from "../context/UserAuthContext";
 
@@ -23,9 +23,11 @@ const Signup = () => {
   };
 
   return (
-    <>
-      <div className="p-4 box">
-        <h2 className="mb-3">Tandm Signup</h2>
+    <Container>
+      <Row style={{display: "flex", justifyContent: "center"}}>
+        <Col style={{maxWidth: "300px"}}>
+        <h5 className="mb-4">Sign up for an account.</h5>
+        <h6 className="mb-3">Enter a Username</h6>
         {error && <Alert variant="danger">{error}</Alert>}
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -35,11 +37,19 @@ const Signup = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
           </Form.Group>
-
+          <h6 className="mb-3">Choose a Password</h6>
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Control
               type="password"
               placeholder="Password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </Form.Group>
+          <h6 className="mb-3">Security token</h6>
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Control
+              type="password"
+              placeholder="Enter your key"
               onChange={(e) => setPassword(e.target.value)}
             />
           </Form.Group>
@@ -50,11 +60,12 @@ const Signup = () => {
             </Button>
           </div>
         </Form>
-      </div>
+        </Col>
+      </Row>
       <div className="p-4 box mt-3 text-center">
         Already have an account? <Link to="/">Log In</Link>
       </div>
-    </>
+    </Container>
   );
 };
 
