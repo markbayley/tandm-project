@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/tandm-project/static/css/main.50ebc282.css",
-    "main.js": "/tandm-project/static/js/main.b8c9b8ec.js",
+    "main.js": "/tandm-project/static/js/main.646c091d.js",
     "static/media/building.png": "/tandm-project/static/media/building.b248739bd4316493e014.png",
     "index.html": "/tandm-project/index.html",
     "main.50ebc282.css.map": "/tandm-project/static/css/main.50ebc282.css.map",
-    "main.b8c9b8ec.js.map": "/tandm-project/static/js/main.b8c9b8ec.js.map"
+    "main.646c091d.js.map": "/tandm-project/static/js/main.646c091d.js.map"
   },
   "entrypoints": [
     "static/css/main.50ebc282.css",
-    "static/js/main.b8c9b8ec.js"
+    "static/js/main.646c091d.js"
   ]
 }
