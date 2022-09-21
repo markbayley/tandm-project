@@ -4,20 +4,10 @@ import {
   Image,
   Row,
   Nav,
-  Form,
-  FormControl,
   Col,
 } from "react-bootstrap";
 import {
-  Funnel,
-  SortDown,
-  SortUp,
-  Upload,
-  SortAlphaDownAlt,
-  SortAlphaUp,
-  Search,
   ZoomIn,
-  Save,
   ArrowCounterclockwise,
 } from "react-bootstrap-icons";
 
@@ -26,54 +16,79 @@ const ImageUploader = () => {
 
   return (
     <>
-      <Row>
-        <input
-          type="file"
-          name=""
-          onChange={(event) => {
-            //   console.log(event.target.files[0]);
-            setSelectedImage(event.target.files[0]);
-          }}
-        />
-      </Row>
-
       {selectedImage ? (
-        <Row>
-          <Col>
+        <Col>
+          <Row>
             <Image
               alt="uploaded image"
-              width={"150px"}
-              height={"100px"}
               src={URL.createObjectURL(selectedImage)}
             />
-          </Col>
-        </Row>
+          </Row>
+        </Col>
       ) : (
-        <Row>
-          <Col >
+        <Col>
+          <Row>
             <Image
-            style={{borderRadius: "5px", opacity: 0.3}}
+              style={{ borderRadius: "5px", opacity: 0.3 }}
               alt="placeholder image"
-              width={"150px"}
-              height={"100px"}
-              // width="100%"
-              // height="100%"
               src="/placeholder.png"
             />
-          </Col>
-        </Row>
+          
+        
+         
+          </Row>
+    <Row className="m-0 pt-2">
+          <Button size="sm" variant="secondary" >
+            <input
+         
+              className="pt-2 "
+              style={{ fontSize: "14px", cursor: "copy" }}
+              type="file"
+              name="file-upload"
+              onChange={(event) => {
+                //   console.log(event.target.files[0]);
+                setSelectedImage(event.target.files[0]);
+              }}
+            />
+         
+            </Button>
+            </Row>
+
+        </Col>
       )}
 
-      <Nav.Link>
-        <Button
-          onClick={() => setSelectedImage(null)}
-          size="sm"
-          variant="secondary"
-        >
-          {" "}
-          Remove <ArrowCounterclockwise color="white" size={20} />
-        </Button>
-      </Nav.Link>
+      {selectedImage ? (
+        <>
+          <Nav.Link href="/viewer">
+            <Button size="sm" variant="warning">
+              {" "}
+              View <ZoomIn size={20} />
+            </Button>
+          </Nav.Link>
+
+          <Nav.Link>
+            <Button
+              onClick={() => setSelectedImage(null)}
+              size="sm"
+              variant="danger"
+            >
+              {" "}
+              Remove <ArrowCounterclockwise size={20} />
+            </Button>
+          </Nav.Link>
+        </>
+      ) : (
+        <Nav.Link>
+          <Button
+            onClick={() => setSelectedImage(null)}
+            size="sm"
+            variant="secondary"
+          >
+            {" "}
+            Remove <ArrowCounterclockwise color="white" size={20} />
+          </Button>
+        </Nav.Link>
+      )}
     </>
   );
 };

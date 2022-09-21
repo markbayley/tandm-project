@@ -1,4 +1,3 @@
-import { Container, Row, Col } from "react-bootstrap";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/LandingPage";
@@ -24,10 +23,17 @@ function App() {
               </ProtectedRoute>
             }
           />
-              <Route path="/" element={<Home />} />
+          <Route
+            path="/viewer"
+            element={
+              <ProtectedRoute>
+                <DocumentViewer />
+              </ProtectedRoute>
+            }
+          />
+          <Route path="/" element={<Home />} />
           <Route path="/signup" element={<Signup />} />
-           <Route path="/viewer" element={<DocumentViewer />} />
-        
+          <Route path="/login" element={<Login />} />
         </Routes>
       </UserAuthContextProvider>
     </>

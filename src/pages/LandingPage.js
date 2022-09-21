@@ -1,9 +1,8 @@
 import React from "react";
-import { Container, Button, Row, Col, ModalTitle } from "react-bootstrap";
-import Image from "react-bootstrap/Image";
-import Nav from "react-bootstrap/Nav";
+import { Container, Button, Row, Col } from "react-bootstrap";
 import { useUserAuth } from "../context/UserAuthContext";
 import { Link, useNavigate } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const { user } = useUserAuth();
@@ -12,64 +11,64 @@ const Home = () => {
       <Container
         style={{
           display: "flex",
+
+          justifyContent: "center",
           alignItems: "center",
-          justifyContent: "flex-end",
-          height: "100vh",
+          height: "80vh",
         }}
-        className="header"
+        className=""
       >
         <Row>
-          <Col className="subtitle">
-            <div
-              style={{ fontSize: "50px", color: "goldenrod"}}
-              className="mb-2 title"
+          <Col>
+            <Row
+              style={{ fontSize: "110px", color: "#007bff", fontWeight: 600 }}
             >
-              Building Design Software
-            </div>
+              Tandm
+            </Row>
+
             {user ? (
-              <div className="subtitle">
-                <h5 className="mb-3 ">
-                  You are signed in. Access the dashboard below.
-                </h5>
-            
-                  <Button variant="outline-light" size="lg" className="my-4">
-                  <Link to="/dashboard">
+              <>
+                <h1 style={{ lineHeight: "0", marginBottom: "50px" }}>
+                  Building Together
+                </h1>
+                <h5 className="mt-5 mb-3">You are signed in.</h5>
+                <Link to="/dashboard">
+                  <Button variant="warning" size="lg" className="mb-5">
                     Dashboard
-                    </Link>
                   </Button>
-                
-                <h6 className="mb-3 " style={{ color: "lightgrey" }}>
+                </Link>
+                <h5 className="mb-3 " style={{ color: "lightgrey" }}>
                   Need more information?{" "}
                   <Link style={{ color: "lightgrey" }} to="/contact">
                     Contact us
                   </Link>
                   .
-                </h6>
-              </div>
-            ) : (
-              // <Button variant="outline-light" size="lg" className="mt-4 " ><Nav.Link href="/dashboard"> Get Started</Nav.Link></Button> :
-              <div className="subtitle">
-                <h5 className="mb-3 ">
-                  A <strong className="bold">security key</strong> is required
-                  to sign in to the dashboard.
                 </h5>
+              </>
+            ) : (
+              <>
+                <h1 style={{ lineHeight: "0", marginBottom: "50px" }}>
+                  Building Together
+                </h1>
                 <Link to="/signup">
-                  <Button variant="outline-warning" size="lg" className="my-4">
-                    Sign In
+                  <Button variant="outline-warning" size="lg" className="my-4 ">
+                    SIGN IN
                   </Button>
                 </Link>
-                <h6 className="mb-3 " style={{ color: "lightgrey" }}>
+                <h5 className="mb-3 " style={{ color: "lightgrey" }}>
                   Don't have a key?{" "}
                   <Link style={{ color: "lightgrey" }} to="/contact">
                     Contact us
                   </Link>
                   .
-                </h6>
-              </div>
+                </h5>
+              </>
             )}
           </Col>
         </Row>
       </Container>
+
+      <Footer />
     </>
   );
 };

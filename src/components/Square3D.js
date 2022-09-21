@@ -1,20 +1,8 @@
 import React, { useEffect, useState } from "react";
-
-// import { Canvas } from "react-three-fiber";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { DoubleSide } from "three";
-// import ThreeDRotation from '@mui/icons-material/ThreeDRotation';
-// import CameraswitchIcon from '@mui/icons-material/Cameraswitch';
-// import MouseIcon from '@mui/icons-material/Mouse';
-// import ControlCameraIcon from '@mui/icons-material/ControlCamera';
-
-// Drei is a really helpful library
-// It has helpers for react-three-fiber
 import { Html, OrbitControls, PerspectiveCamera } from "@react-three/drei";
-
-import "./styles.css";
-
-import Button from "react-bootstrap/Button";
+// import "./styles.css";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Popover from "react-bootstrap/Popover";
 
@@ -51,9 +39,7 @@ const UpdatingPopover = React.forwardRef(
 
     return (
       <Popover ref={ref} body {...props}>
- 
         {children}
-        
       </Popover>
     );
   }
@@ -61,40 +47,30 @@ const UpdatingPopover = React.forwardRef(
 
 const longContent = (
   <>
-      
-      <strong>@sarah.smith</strong> commented: <br/>
-    
-      <em>
-        {" "}
-        "This part is<strong> amazing</strong>. It's very engaging. right?"
-      </em>
-
-  
-
- 
+    <strong>@sarah.smith</strong> commented: <br />
+    <em>
+      {" "}
+      "This part is<strong> amazing</strong>. It's very engaging. right?"
+    </em>
   </>
 );
 const shortContent = (
   <>
-
-      <strong>@sarah.smith</strong> commented: <br/>
-     
-      <em>
-        {" "}
-        "This part is<strong> amazing</strong>. It's very engaging. right?"
-      </em>
-
+    <strong>@sarah.smith</strong> commented: <br />
+    <em>
+      {" "}
+      "This part is<strong> amazing</strong>. It's very engaging. right?"
+    </em>
   </>
 );
 // Our main React component renders a Canvas from
 // react-three-fiber. The Canvas component does most
 // of the hard work of setting up the scene, renderer
 // and other core components of Three.js
-export default function Square() {
+export default function Square3D() {
   return (
     <div>
       <Canvas style={{ height: "77vh", cursor: "move" }}>
-       
         {/*
            A group is used for grouping, kind og like
           groups in SVGs. The positioning of elements
@@ -123,7 +99,6 @@ export default function Square() {
         */}
         <OrbitControls />
       </Canvas>
-  
     </div>
   );
 }
@@ -178,18 +153,16 @@ function ToolTip1() {
 
   return (
     <Html center position={[-1, 0, -1]}>
-      {/* <div ><p>Left click and drag to <strong>rotate</strong></p>   </div> */}
       <OverlayTrigger
         trigger="click"
         placement="top"
-      
         overlay={
           <UpdatingPopover id="popover-contained">{content}</UpdatingPopover>
         }
       >
-         <div style={{cursor: "pointer"}}>
+        <div style={{ cursor: "pointer" }}>
           <p>
-            <strong>{ content ? "x" : "3"}</strong>
+            <strong>{content ? "x" : "3"}</strong>
           </p>
         </div>
       </OverlayTrigger>
@@ -202,7 +175,7 @@ function ToolTip2() {
     <>
       <Html center position={[1, -1, -1]}>
         <OverlayTrigger trigger="click" placement="right" overlay={popover1}>
-          <div style={{cursor: "pointer"}}>
+          <div style={{ cursor: "pointer" }}>
             <p>
               <strong>2</strong>
             </p>
@@ -216,9 +189,9 @@ function ToolTip2() {
 function ToolTip3() {
   return (
     <Html center position={[-1, -1, 1]}>
-      <OverlayTrigger trigger="click" placement="left" overlay={popover2}  >
-      <div style={{cursor: "pointer"}}>
-          <p >
+      <OverlayTrigger trigger="click" placement="left" overlay={popover2}>
+        <div style={{ cursor: "pointer" }}>
+          <p>
             <strong>1</strong>
           </p>
         </div>

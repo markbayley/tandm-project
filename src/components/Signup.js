@@ -62,9 +62,12 @@ const Signup = () => {
         </Form>
         </Col>
       </Row>
-      <div className="p-4 box mt-3 text-center">
-        Already have an account? <Link to="/">Log In</Link>
-      </div>
+    
+      <div className="p-3 box mt-0 text-center">
+      Already have an account? <Link to="/login" ><Button variant="outline-light" type="Submit"  className="pt-0">
+              Login
+            </Button></Link>
+            </div>
     </Container>
   );
 };
