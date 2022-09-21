@@ -18,9 +18,9 @@ export default function Footer() {
                     <div class="col-sm-6 col-md-3 item">
                         <h3>Services</h3>
                         <ul>
-                            <li><a href="#">Web design</a></li>
+                            <li><a href="#">CAD Design</a></li>
                             <li><a href="#">Development</a></li>
-                            <li><a href="#">Hosting</a></li>
+                            <li><a href="#">Building</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-6 col-md-3 item">

@@ -161,9 +161,9 @@ function ToolTip1() {
         }
       >
         <div style={{ cursor: "pointer" }}>
-          <p>
+        <div className="marker">
             <strong>{content ? "x" : "3"}</strong>
-          </p>
+          </div>
         </div>
       </OverlayTrigger>
     </Html>
@@ -176,9 +176,9 @@ function ToolTip2() {
       <Html center position={[1, -1, -1]}>
         <OverlayTrigger trigger="click" placement="right" overlay={popover1}>
           <div style={{ cursor: "pointer" }}>
-            <p>
+            <div className="marker">
               <strong>2</strong>
-            </p>
+            </div>
           </div>
         </OverlayTrigger>
       </Html>
@@ -191,9 +191,9 @@ function ToolTip3() {
     <Html center position={[-1, -1, 1]}>
       <OverlayTrigger trigger="click" placement="left" overlay={popover2}>
         <div style={{ cursor: "pointer" }}>
-          <p>
+        <div className="marker">
             <strong>1</strong>
-          </p>
+          </div>
         </div>
       </OverlayTrigger>
     </Html>

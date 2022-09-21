@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Button, Row, Col, Nav } from "react-bootstrap";
 import {
+  ArrowReturnRight,
   ArrowRepeat,
   ArrowsMove,
   ZoomIn,
@@ -10,8 +11,11 @@ import {
 import ViewerBox from "../components/ViewerBox";
 import ChatBox from "../components/ChatBox";
 
+
 const DocumentViewer = () => {
   return (
+    <>
+
     <Container className="pt-3">
       {/* SubNav */}
       <Row className="mb-2">
@@ -32,15 +36,16 @@ const DocumentViewer = () => {
         <Col sm={1} className="mt-0  arrows">
           {" "}
           <Nav.Link href="/dashboard" className="p-1">
-            <Button size="sm" variant="secondary" disabled>
+           
+            <Button size="sm" variant="outline-warning">
               {" "}
-              <ArrowRepeat color="black" size={20} />
+              <ArrowReturnLeft  size={20} />
             </Button>
           </Nav.Link>
-          <Nav.Link href="/dashboard" className="p-1">
-            <Button size="sm">
+          <Nav.Link href="/" className="p-1">
+          <Button size="sm" variant="secondary" disabled>
               {" "}
-              <ArrowReturnLeft color="white" size={20} />{" "}
+              <ArrowReturnRight  size={20} />{" "}
             </Button>
           </Nav.Link>{" "}
         </Col>
@@ -54,6 +59,7 @@ const DocumentViewer = () => {
         <ChatBox />
       </Row>
     </Container>
+    </>
   );
 };
 

@@ -38,14 +38,14 @@ const Signup = () => {
             />
           </Form.Group>
           <h6 className="mb-3">Choose a Password</h6>
-          <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Group className="mb-4" controlId="formBasicPassword">
             <Form.Control
               type="password"
               placeholder="Password"
               onChange={(e) => setPassword(e.target.value)}
             />
           </Form.Group>
-          <h6 className="mb-3">Security token</h6>
+          <h6 className="mb-3 pt-1">Security token (Authorised access only)</h6>
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Control
               type="password"

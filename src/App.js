@@ -8,6 +8,7 @@ import { UserAuthContextProvider } from "./context/UserAuthContext";
 import Navbar from "./components/Navbar";
 import DocumentManager from "./pages/DocumentManager";
 import DocumentViewer from "./pages/DocumentViewer";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </UserAuthContextProvider>
     </>

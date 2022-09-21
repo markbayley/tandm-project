@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -9,11 +9,17 @@ import {
   ArrowReturnRight,
   ArrowReturnLeft,
 } from "react-bootstrap-icons";
-import TableComponent from "../components/TableComponent";
+// import TableComponent from "../components/TableComponent";
 import SideBar from "../components/SideBar";
 import { SearchBar } from "../components/SearchBar";
+import DataTable from "../components/DataTable";
+import ImageUploader from "../components/ImageUploader";
+
+
 
 function DocumentManager() {
+
+
   return (
     <Container className="pt-3">
       {/* SubNav */}
@@ -25,23 +31,26 @@ function DocumentManager() {
         </Col>
         <Col sm={3} className="mt-2">
           {" "}
+      
         </Col>
         {/* Search */}
-
-        <SearchBar />
+       
+        <ImageUploader />
+       
+        {/* <SearchBar /> */}
 
         {/* Links */}
         <Col className="arrows" sm={2}>
           <Nav.Link href="/" className="p-1">
-            <Button size="sm">
+            <Button size="sm" variant="outline-warning">
               {" "}
-              <ArrowReturnLeft color="white" size={20} />
+              <ArrowReturnLeft  size={20} />
             </Button>
           </Nav.Link>
           <Nav.Link href="/viewer" className="p-1 ">
-            <Button size="sm">
+            <Button size="sm" variant="outline-warning">
               {" "}
-              <ArrowReturnRight color="white" size={20} />{" "}
+              <ArrowReturnRight  size={20} />{" "}
             </Button>
           </Nav.Link>{" "}
         </Col>
@@ -49,11 +58,15 @@ function DocumentManager() {
 
       <Row>
         {/* Table */}
+    
+        {/* <TableComponent /> */}
+        <DataTable />
 
-        <TableComponent />
 
-        {/* SideBar */}
-        <SideBar />
+        
+
+    
+        {/* <SideBar /> */}
       </Row>
     </Container>
   );
