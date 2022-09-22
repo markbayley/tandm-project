@@ -8,6 +8,7 @@ import { useNavigate } from "react-router";
 import { useUserAuth } from "../context/UserAuthContext";
 import Image from "react-bootstrap/Image";
 import Nav from "react-bootstrap/Nav";
+import { Link } from "react-router-dom";
 import {
   House,
   Envelope,
@@ -63,8 +64,8 @@ function NavScrollExample() {
           >
             {user ? (
               <>
-                <Nav.Link href="/dashboard">Dashboard</Nav.Link>
-                <Nav.Link href="/viewer">CAD Viewer</Nav.Link>
+                <Link to="/dashboard">Dashboard</Link>
+                <Link to="/viewer">CAD Viewer</Link>
               </>
             ) : (
               ""

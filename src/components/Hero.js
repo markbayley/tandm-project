@@ -55,7 +55,7 @@ const Hero = () => {
     
            <>
             <Animated animationIn="fadeIn" animationInDuration={5000} isVisible={true}>
-              <h1 className="light" style={{ lineHeight: "0", marginBottom: "50px", color: "lightgrey" }}>
+              <h1 className="light large" style={{ lineHeight: "0", marginBottom: "50px", color: "lightgrey" }}>
                 Building Together
                 {/* <span class="sup">&trade;</span> */}
               </h1>
