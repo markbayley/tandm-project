@@ -136,12 +136,12 @@ function NavScrollExample() {
               </NavDropdown>
             ) : (
               <>
-                <Nav.Link href="/contact">Contact</Nav.Link>
-                <Nav.Link href="/login">Login</Nav.Link>
+                <Link to="/contact">Contact</Link>
+                <Link to="/login">Login</Link>
               </>
             )}
             {user ? (
-              <Nav.Link className="mt-0 pt-1">
+              <Link to="/" className="mt-0 pt-1">
                 <Image
                   className="profile-image"
                   src={avatar1}
@@ -149,7 +149,7 @@ function NavScrollExample() {
                   height="30px"
                   roundedCircle
                 />
-              </Nav.Link>
+              </Link>
             ) : (
               ""
             )}

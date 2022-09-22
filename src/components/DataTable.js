@@ -12,7 +12,7 @@ import avatar3 from '../assets/avatar-3.png'
 import cad1 from '../assets/cad-1.png'
 import cad2 from '../assets/cad-2.png'
 import cad3 from '../assets/cad-3.png'
-
+import { Link } from "react-router-dom";
 import ToolkitProvider, {Search} from 'react-bootstrap-table2-toolkit/dist/react-bootstrap-table2-toolkit';
 import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
 
@@ -24,9 +24,9 @@ const products = [
     image: <Image src={cad2} alt="cad-2" width="125px" height="90px" />,
     title: "Central Design 3d",
     link: (
-      <Button variant="outline-warning" href="/viewer" size="md">
-        View
-      </Button>
+      <Link variant="outline-warning" to="/viewer" size="md">
+        <Button variant="outline-warning">View</Button>
+      </Link>
     ),
     uploader: "@andrew.wright",
     date: "04/08/2022",
@@ -70,9 +70,9 @@ const products = [
     image: <Image src={cad3} width="125px" height="90px" />,
     title: "CAD Pipe Network 1b",
     link: (
-      <Button variant="outline-warning" href="/viewer" size="md">
-        View
-      </Button>
+      <Link variant="outline-warning" to="/viewer" size="md">
+      <Button variant="outline-warning">View</Button>
+    </Link>
     ),
     uploader: "@john.fellows",
     date: "02/07/2022",
@@ -102,9 +102,9 @@ const products = [
     image: <Image src={cad1} width="125px" height="90px" />,
     title: "CAD Design Floor 1a",
     link: (
-      <Button variant="outline-warning" href="/viewer" size="md">
-        View
-      </Button>
+      <Link variant="outline-warning" to="/viewer" size="md">
+      <Button variant="outline-warning">View</Button>
+    </Link>
     ),
     uploader: "@mathew.sails",
     date: "05/09/2022",
@@ -149,9 +149,9 @@ const products = [
     image: <Image src={cad2} width="125px" height="90px" />,
     title: "Thornton Design 1c",
     link: (
-      <Button variant="outline-warning" href="/viewer" size="md">
-        View
-      </Button>
+      <Link variant="outline-warning" to="/viewer" size="md">
+      <Button variant="outline-warning">View</Button>
+    </Link>
     ),
     uploader: "@andrew.wright",
     date: "04/08/2022",
@@ -182,9 +182,9 @@ const products = [
     image: <Image src={cad1} width="125px" height="90px" />,
     title: "Thornton Design 1c",
     link: (
-      <Button variant="outline-warning" href="/viewer" size="md">
-        View
-      </Button>
+      <Link variant="outline-warning" to="/viewer" size="md">
+        <Button variant="outline-warning">View</Button>
+      </Link>
     ),
     uploader: "@andrew.wright",
     date: "04/08/2022",
@@ -230,9 +230,9 @@ const products = [
     image: <Image src={cad3} width="125px" height="90px" />,
     title: "CAD Pipe Network 1b",
     link: (
-      <Button variant="outline-warning" href="/viewer" size="md">
-        View
-      </Button>
+      <Link variant="outline-warning" to="/viewer" size="md">
+        <Button variant="outline-warning">View</Button>
+      </Link>
     ),
     uploader: "@john.fellows",
     date: "02/07/2022",

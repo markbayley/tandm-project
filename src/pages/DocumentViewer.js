@@ -10,7 +10,7 @@ import {
 } from "react-bootstrap-icons";
 import ViewerBox from "../components/ViewerBox";
 import ChatBox from "../components/ChatBox";
-
+import { Link } from "react-router-dom";
 
 const DocumentViewer = () => {
   return (
@@ -35,19 +35,19 @@ const DocumentViewer = () => {
         {/* Links */}
         <Col sm={1} className="mt-0  arrows">
           {" "}
-          <Nav.Link href="/dashboard" className="p-1">
+          <Link to="/dashboard" className="p-1">
            
             <Button size="sm" variant="outline-warning">
               {" "}
               <ArrowReturnLeft  size={20} />
             </Button>
-          </Nav.Link>
-          <Nav.Link href="/" className="p-1">
+          </Link>
+          <Link to="/" className="p-1">
           <Button size="sm" variant="secondary" disabled>
               {" "}
               <ArrowReturnRight  size={20} />{" "}
             </Button>
-          </Nav.Link>{" "}
+          </Link>{" "}
         </Col>
       </Row>
 

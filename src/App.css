@@ -503,7 +503,10 @@ a {
   padding: 1px 5px;
   text-decoration: none !important;
   list-style: none;
+}
 
+a:hover {
+  color: #ffc107 !important;
 }
 
 

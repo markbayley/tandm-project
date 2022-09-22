@@ -14,7 +14,7 @@ import SideBar from "../components/SideBar";
 import { SearchBar } from "../components/SearchBar";
 import DataTable from "../components/DataTable";
 import ImageUploader from "../components/ImageUploader";
-
+import { Link } from "react-router-dom";
 
 
 function DocumentManager() {
@@ -41,18 +41,18 @@ function DocumentManager() {
 
         {/* Links */}
         <Col className="arrows" sm={2}>
-          <Nav.Link href="/" className="p-1">
+          <Link to="/" className="p-1">
             <Button size="sm" variant="outline-warning">
               {" "}
               <ArrowReturnLeft  size={20} />
             </Button>
-          </Nav.Link>
-          <Nav.Link href="/viewer" className="p-1 ">
+          </Link>
+          <Link to="/viewer" className="p-1 ">
             <Button size="sm" variant="outline-warning">
               {" "}
               <ArrowReturnRight  size={20} />{" "}
             </Button>
-          </Nav.Link>{" "}
+          </Link>{" "}
         </Col>
       </Row>
 
