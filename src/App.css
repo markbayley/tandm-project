@@ -498,9 +498,15 @@ thead, tbody, tfoot, tr, td, th {
   color: #007bff;
 }
 
-a {
+.toplink  {
   color: white !important;
   padding: 0px 10px;
+  text-decoration: none !important;
+  list-style: none;
+}
+
+a {
+  color: white !important;
   text-decoration: none !important;
   list-style: none;
 }
