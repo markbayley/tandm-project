@@ -1,14 +1,21 @@
 {
   "files": {
-    "main.css": "/tandm-project/static/css/main.50ebc282.css",
-    "main.js": "/tandm-project/static/js/main.646c091d.js",
+    "main.css": "/tandm-project/static/css/main.0c5aa46b.css",
+    "main.js": "/tandm-project/static/js/main.739d1788.js",
     "static/media/building.png": "/tandm-project/static/media/building.b248739bd4316493e014.png",
+    "static/media/placeholder.png": "/tandm-project/static/media/placeholder.3482cde581ebcefe85b4.png",
+    "static/media/cad-2.png": "/tandm-project/static/media/cad-2.a615861ac1066ee767ec.png",
+    "static/media/cad-1.png": "/tandm-project/static/media/cad-1.bc89b7e9a330fd82d6f2.png",
+    "static/media/avatar-2.png": "/tandm-project/static/media/avatar-2.45329f8500dce6f799ec.png",
+    "static/media/avatar-1.png": "/tandm-project/static/media/avatar-1.0c49895e1a8a764aae43.png",
+    "static/media/avatar-3.png": "/tandm-project/static/media/avatar-3.787866a8311c960de433.png",
+    "static/media/cad-3.png": "/tandm-project/static/media/cad-3.0cd8149ebd262964e440.png",
     "index.html": "/tandm-project/index.html",
-    "main.50ebc282.css.map": "/tandm-project/static/css/main.50ebc282.css.map",
-    "main.646c091d.js.map": "/tandm-project/static/js/main.646c091d.js.map"
+    "main.0c5aa46b.css.map": "/tandm-project/static/css/main.0c5aa46b.css.map",
+    "main.739d1788.js.map": "/tandm-project/static/js/main.739d1788.js.map"
   },
   "entrypoints": [
-    "static/css/main.50ebc282.css",
-    "static/js/main.646c091d.js"
+    "static/css/main.0c5aa46b.css",
+    "static/js/main.739d1788.js"
   ]
 }
