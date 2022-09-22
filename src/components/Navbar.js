@@ -73,23 +73,26 @@ function NavScrollExample() {
 
             {!user ? (
               <NavDropdown title="Products" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="/error">CAD Design</NavDropdown.Item>
-                <NavDropdown.Item href="/error">
-                  Building Software
+                <NavDropdown.Item > 
+                  <Link to="/error">CAD Design</Link></NavDropdown.Item>
+                <NavDropdown.Item >
+              <Link to="/error">Building Software</Link>
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="/error">Get A Quote</NavDropdown.Item>
+                <NavDropdown.Item >  
+                  <Link to="/error">Get A Quote</Link>
+                  </NavDropdown.Item>
               </NavDropdown>
             ) : (
               " "
             )}
             {!user ? (
               <NavDropdown title="People" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="/error">About Us</NavDropdown.Item>
-                <NavDropdown.Item href="/error">Team</NavDropdown.Item>
+                <NavDropdown.Item ><Link to="/error">About Us</Link></NavDropdown.Item>
+                <NavDropdown.Item ><Link to="/error">Team</Link></NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="/error">
-                  Company Profile
+                <NavDropdown.Item >
+                <Link to="/error">Company Profile</Link>
                 </NavDropdown.Item>
               </NavDropdown>
             ) : (
@@ -106,9 +109,12 @@ function NavScrollExample() {
             <Modal.Header closeButton>
               <Modal.Title>
                 {" "}
-                <Navbar.Brand href="/" style={{ color: "#007bff" }}>
+                <Navbar.Brand style={{ color: "#007bff" }}>
+                <Link to="/">
                   <House size={24} className="mb-2" />
+               
                   Tandm.
+                  </Link>
                 </Navbar.Brand>
               </Modal.Title>
             </Modal.Header>
@@ -124,20 +130,20 @@ function NavScrollExample() {
                 align="end"
               >
                 <NavDropdown.Item>
-                  <Envelope size={20} className="mb-2" /> Messages
+                <Link to="/error"> <Envelope size={20} className="mb-2" /> Messages{" "}   </Link>
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action4">
-                  <Gear size={20} className="mb-2" /> Settings{" "}
+                <NavDropdown.Item >
+                <Link to="/error"> <Gear size={20} className="mb-2" /> Settings{" "}   </Link>
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item onClick={handleLogout}>
-                  <BoxArrowInLeft size={20} className="mb-2" /> Sign Out
+                 <Link to="/"><BoxArrowInLeft size={20} className="mb-2" /> Sign Out</Link> 
                 </NavDropdown.Item>
               </NavDropdown>
             ) : (
               <>
-                <Link to="/contact">Contact</Link>
-                <Link to="/login">Login</Link>
+                <Link to="/contact"> Contact </Link>
+                <Link to="/login"> Login </Link>
               </>
             )}
             {user ? (

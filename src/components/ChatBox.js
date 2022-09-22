@@ -16,77 +16,94 @@ const ChatBox = () => {
         height: "77vh",
       }}
     >
-        <br></br>
-      <h6 className="mb-3" style={{ color: "grey" }}>
+ 
+      <h6 className="mb-4" style={{ color: "grey" }}>
         Tue 2nd Sep
       </h6>
-      <Row>
-        <Nav.Link>
+      
+    
           <Image
             className="profile-image"
             src={avatar1}
             alt="Profile"
             height="25px"
           />
-          &nbsp;@sarah.smith
-        </Nav.Link>
+          @sarah.smith
+ 
         <br />
-        <em> "This part is amazing. It's very engaging.</em>
-      </Row>
+        <em style={{ color: "lightgrey" }}>"This part is amazing. It's very engaging.</em>
+      
       <br />
-      <Row>
-        <Nav.Link>
+      <br />
+   
           <Image
             className="profile-image"
             src={avatar2}
             alt="Profile"
             height="25px"
           />
-          &nbsp;@bill.brown
-        </Nav.Link>
+            <a>@bill.brown</a>
+     
         <br />
-        <em>
+        <em style={{ color: "lightgrey" }}>
           {" "}
           "This part is ok. Needs some work though. I think the main thing is to
           keep it under budget for the client".
         </em>
-      </Row>
+  
       <hr></hr>
-      <h6 className="mb-3" style={{ color: "grey" }}>
+      <h6 className="mb-4" style={{ color: "grey" }}>
         Mon 1st Sep
       </h6>
-      <Row>
-        <Nav.Link>
+   
+     
           <Image
             className="profile-image"
             src={avatar1}
             alt="Profile"
             height="25px"
           />
-          &nbsp;@sarah.smith
-        </Nav.Link>
+         <a>@sarah.smith</a>
+   
         <br />
-        <em>
+        <em style={{ color: "lightgrey" }}>
           {" "}
           "What do you mean 'ok'? Can you suggest any improvements Bill."
         </em>
-      </Row>
+    
       <br />
-      <Row>
-        <Nav.Link>
+    
+      <br />
           <Image
             className="profile-image"
             src={avatar2}
             alt="Profile"
             height="25px"
           />
-          &nbsp;@bill.brown
-        </Nav.Link>
+           <a>@bill.brown</a>
+      
         <br />
-        <em> "No".</em>
-      </Row>
+        <em style={{ color: "lightgrey" }}> "No".</em>
+        <br />
+      <br />
+   
+          <Image
+            className="profile-image"
+            src={avatar2}
+            alt="Profile"
+            height="25px"
+          />
+           <a>@bill.brown</a>
+     
+        <br />
+        <em style={{ color: "lightgrey" }}>
+          {" "}
+          "This part is ok. Needs some work though...".
+        </em>
+      
+ 
       <br /> 
-      <Row>
+      <br /> 
         <Form className="d-flex" style={{ height: "35px" }}>
           <Form.Control
             type="search"
@@ -94,11 +111,11 @@ const ChatBox = () => {
             className="me-2"
             aria-label="Search"
           />
-          <Button variant="warning" size="sm">
+          <Button variant="outline-warning" size="sm">
             Reply
           </Button>
         </Form>
-      </Row>
+    
     </Col>
   );
 };

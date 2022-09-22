@@ -41,12 +41,12 @@ const Hero = () => {
                 </Button>
               </Link>
               <h5 className="mb-3 " style={{ color: "lightgrey" }}>
-                Already have an account?{" "}
+                &nbsp;Already have an account?{" "}
                 <Link  to="/login" style={{ color: "lightgrey" }} >
                   Log in
                 </Link>
                 
-                .
+                
               </h5>
      
               </>
@@ -60,12 +60,13 @@ const Hero = () => {
                 {/* <span class="sup">&trade;</span> */}
               </h1>
               </Animated>
-              <h5 className="mt-5 mb-3">You are signed in.</h5>
+            
          
               <Link to="/dashboard">
-                <Button variant="outline-warning" size="lg" className="mb-5">
+                <Button variant="outline-warning" size="lg" className="my-4">
                   Dashboard
                 </Button>
+                <h5 className="mb-3">&nbsp;You are signed in.</h5>
               </Link>
               </>
           )}

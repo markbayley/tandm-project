@@ -62,9 +62,9 @@ const Login = ({ handleClose }) => {
           <div className="p-3 box mt-0 text-center">
             No account?{" "}
             <Link to="/signup">
-              <Button variant="outline-light" type="Submit" className="pt-0">
+            
                 Sign up.
-              </Button>
+         
             </Link>
           </div>
         </Col>

@@ -33,36 +33,33 @@ const products = [
     status: "Review",
     commenter1:       
     <>
-    <Nav.Link>
+ 
       <Image
         className="profile-image"
         src={avatar1}
         alt="Profile"
         height="25px"
       />
-      &nbsp;@sarah.williams
-    </Nav.Link>
-    <h6>
-      {" "}
-      <p style={{ color: "lightgrey", fontWeight: 200 }}>
-        <em>&nbsp;&nbsp; "You have just been fired sadly Bill!"</em>
-      </p>
-    </h6>{" "}
-    <Nav.Link>
+    &nbsp;@sarah.williams <br></br>
+  
+ 
+     
+        <em style={{ color: "lightgrey" }}>"You have just been fired sadly Bill!"</em>
+        <br></br>
+        <br></br>
       <Image
         className="profile-image"
         src={avatar2}
         alt="Profile"
         height="25px"
       />
-      &nbsp;@josh.ryan
-    </Nav.Link>
-    <h6>
-      {" "}
-      <p style={{ color: "lightgrey", fontWeight: 200 }}>
-        <em>&nbsp;&nbsp; " Did your six year old crayon this?"</em>
-      </p>
-    </h6>{" "}
+     
+     @josh.ryan <br></br>
+  
+  
+      
+        <em style={{ color: "lightgrey" }}> "Did your six year old crayon this?"</em>
+   
   </>,
   },
   {
@@ -79,21 +76,20 @@ const products = [
     status: "Active",
     commenter1:       
     <>
-    <Nav.Link>
+ 
       <Image
         className="profile-image"
         src={avatar3}
         alt="Profile"
         height="25px"
       />
-      &nbsp;@jane.mellow
-    </Nav.Link>
-    <h6>
-      {" "}
-      <p style={{ color: "lightgrey", fontWeight: 200, paddingLeft: "20px"}}>
-        <em> "It is a long established fact that a reader will be distracted by the readable content."</em>
-      </p>
-    </h6>{" "}
+    @jane.mellow <br></br>
+
+   
+    
+        <em style={{ color: "lightgrey"}}> "It is a long established fact that a reader will be distracted by the readable content."</em>
+    
+  
    
   </>,
   },
@@ -111,36 +107,32 @@ const products = [
     status: "Final Draft",
     commenter1:      
      <>
-    <Nav.Link>
+
       <Image
         className="profile-image"
         src={avatar3}
         alt="Profile"
         height="25px"
       />
-      &nbsp;@andrew.wright
-    </Nav.Link>
-    <h6>
-      {" "}
-      <p style={{ color: "lightgrey", fontWeight: 200 }}>
-        <em>&nbsp;&nbsp; "You have just been fired sadly Bill!"</em>
-      </p>
-    </h6>{" "}
-    <Nav.Link>
+      &nbsp;@andrew.wright<br></br>
+   
+  
+
+        <em style={{ color: "lightgrey"}}> "You have just been fired sadly Bill!"</em>
+        <br></br>
+        <br></br>
       <Image
         className="profile-image"
         src={avatar2}
         alt="Profile"
         height="25px"
       />
-      &nbsp;@cedric.black
-    </Nav.Link>
-    <h6>
-      {" "}
-      <p style={{ color: "lightgrey", fontWeight: 200 }}>
-        <em>&nbsp;&nbsp; "why do you even bother Mat!"</em>
-      </p>
-    </h6>{" "}
+      @cedric.black <br></br>
+
+  
+
+        <em style={{ color: "lightgrey" }}> "why do you even bother Mat!"</em>
+
   </>,
 
   },
@@ -158,21 +150,18 @@ const products = [
     status: "Review",
     commenter1: (
       <>
-        <Nav.Link>
+ 
           <Image
             className="profile-image"
             src={avatar2}
             alt="Profile"
             height="25px"
           />
-          &nbsp;@bill.jones
-        </Nav.Link>
-        <h6>
-          {" "}
-          <p style={{ color: "lightgrey", fontWeight: 200 }}>
-            <em>&nbsp;&nbsp; "This needs some more work pronto!"</em>
-          </p>
-        </h6>{" "}
+      @bill.jones <br></br>
+ 
+     
+            <em style={{ color: "lightgrey" }}> "This needs some more work pronto!"</em>
+        
       </>
     ),
 
@@ -191,36 +180,31 @@ const products = [
     status: "Review",
     commenter1: (
       <>
-        <Nav.Link>
+  
           <Image
             className="profile-image"
             src={avatar2}
             alt="Profile"
             height="25px"
           />
-          &nbsp;@josh.ryan
-        </Nav.Link>
-        <h6>
-          {" "}
-          <p style={{ color: "lightgrey", fontWeight: 200 }}>
-            <em>&nbsp;&nbsp;"I truly believe that I can fly!"</em>
-          </p>
-        </h6>
-        <Nav.Link>
+        @josh.ryan<br></br>
+     
+        
+      
+            <em style={{ color: "lightgrey" }}>"I truly believe that I can fly!"</em>
+            <br></br>
+            <br></br>
           <Image
             className="profile-image"
             src={avatar2}
             alt="Profile"
             height="25px"
           />
-          &nbsp;@john.fellows
-        </Nav.Link>
-        <h6>
-          {" "}
-          <p style={{ color: "lightgrey", fontWeight: 200 }}>
-            <em>&nbsp;&nbsp;"You have just been fired sadly Bill!"</em>
-          </p>
-        </h6>
+         @john.fellows<br></br>
+      
+
+            <em style={{ color: "lightgrey" }}>"You have just been fired sadly Bill!"</em>
+      
       </>
     ),
  
@@ -238,21 +222,18 @@ const products = [
     date: "02/07/2022",
     status: "Active",
     commenter1:       <>
-    <Nav.Link>
+
       <Image
         className="profile-image"
         src={avatar2}
         alt="Profile"
         height="25px"
       />
-      &nbsp;@josh.ryan
-    </Nav.Link>
-    <h6>
-      {" "}
-      <p style={{ color: "lightgrey", fontWeight: 200 }}>
-        <em>&nbsp;&nbsp; "You have just been fired sadly Bill!"</em>
-      </p>
-    </h6>{" "}
+    @josh.ryan<br></br>
+  
+  
+        <em style={{ color: "lightgrey" }}> "You have just been fired sadly Bill!"</em>
+ 
   </>,
  
   },

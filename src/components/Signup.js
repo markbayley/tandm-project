@@ -64,9 +64,9 @@ const Signup = () => {
       </Row>
     
       <div className="p-3 box mt-0 text-center">
-      Already have an account? <Link to="/login" ><Button variant="outline-light" type="Submit"  className="pt-0">
-              Login
-            </Button></Link>
+      Already have an account? 
+      <Link to="/login" >   Login</Link>
+        
             </div>
     </Container>
   );

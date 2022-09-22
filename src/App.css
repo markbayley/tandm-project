@@ -500,13 +500,14 @@ thead, tbody, tfoot, tr, td, th {
 
 a {
   color: white !important;
-  padding: 1px 5px;
+  padding: 0px 10px;
   text-decoration: none !important;
   list-style: none;
 }
 
 a:hover {
   color: #ffc107 !important;
+  background-color: transparent !important;
 }
 
 
