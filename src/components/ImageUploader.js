@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Button,
   Image,
@@ -17,6 +17,8 @@ import Modal from "react-bootstrap/Modal";
 import {
   Upload,
 } from "react-bootstrap-icons";
+import placeholder from '../assets/placeholder.png'
+import Loading from "./Loading";
 
 
 const ImageUploader = () => {
@@ -25,6 +27,15 @@ const ImageUploader = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 5000);
+  }, []);
 
 
 
@@ -65,9 +76,12 @@ const ImageUploader = () => {
               </Modal.Title>
             </Modal.Header>
             <Modal.Body className=""  >
+   
+
+
             {selectedImage ? (
-              
-     
+                 
+               
             <Image
               alt="uploaded image"
               src={URL.createObjectURL(selectedImage)}
@@ -76,21 +90,26 @@ const ImageUploader = () => {
               className="p-3"
             
             />
-   
+          
       ) : (
       <>
-            <Image
+     {loading ? (
+                  <div className="">
+                  <Loading />
+                  </div>
+                  ) : (      <Image
           
-              alt="placeholder image"
-              src="/placeholder.png"
-              width="100%"
-              height="100%"
-              className="p-3"
-             
-            />
-          
+                    alt="placeholder image"
+                    src={placeholder}
+                    width="100%"
+                    height="100%"
+                    className="p-3"
+                   
+                  /> )}
         
-         
+          
+      
+          
       
   
 
@@ -99,7 +118,7 @@ const ImageUploader = () => {
 
      
       )}
-
+    
       {selectedImage ? (
         <div className="p-3">
         

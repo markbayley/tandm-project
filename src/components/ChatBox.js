@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "react-bootstrap/Image";
 import { Button, Row, Col, Form, Nav } from "react-bootstrap";
+import avatar1 from "../assets/avatar-1.png"
+import avatar2 from "../assets/avatar-2.png"
 
 const ChatBox = () => {
   return (
@@ -22,7 +24,7 @@ const ChatBox = () => {
         <Nav.Link>
           <Image
             className="profile-image"
-            src={"/avatar.png"}
+            src={avatar1}
             alt="Profile"
             height="25px"
           />
@@ -36,7 +38,7 @@ const ChatBox = () => {
         <Nav.Link>
           <Image
             className="profile-image"
-            src={"/avatar-2.png"}
+            src={avatar2}
             alt="Profile"
             height="25px"
           />
@@ -57,7 +59,7 @@ const ChatBox = () => {
         <Nav.Link>
           <Image
             className="profile-image"
-            src={"/avatar.png"}
+            src={avatar1}
             alt="Profile"
             height="25px"
           />
@@ -74,7 +76,7 @@ const ChatBox = () => {
         <Nav.Link>
           <Image
             className="profile-image"
-            src={"/avatar-2.png"}
+            src={avatar2}
             alt="Profile"
             height="25px"
           />

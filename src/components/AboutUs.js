@@ -2,6 +2,9 @@ import React from "react";
 import {Animated} from "react-animated-css";
 import { Col, Row, Container, Button } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
+import {
+  House
+  } from "react-bootstrap-icons";
 
 export default function AboutUs() {
   return (
@@ -15,8 +18,9 @@ export default function AboutUs() {
         }}
         className="header"
       >
-        <Animated animationIn="fadeInRight"  isVisible={true}>
-        <Row className="mt-5 p-5" style={{backgroundColor: "#333867", borderRadius: "5px"}}>
+        <Animated animationIn="fadeInUp" smooth animationInDuration="1500" isVisible={true}>
+          <div style={{marginLeft: "30px"}}><House size={130} color="#333867" /></div>
+        <Row className="mt-0 p-5" style={{backgroundColor: "#333867", borderRadius: "5px"}}>
           <Col >
           
         

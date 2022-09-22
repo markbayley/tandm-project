@@ -25,20 +25,21 @@ const ContactForm = () => {
 
 
   return (
-    <>
+    <div>
   <Container style={{  display: "flex", justifyContent: "center", alignItems: "center", height: "100vh"}}>
   
-    <Row  className="p-5"    style={{  backgroundColor: "474d84", borderRadius: "5px", border: "3px solid #474d84"}}>
-    <h1>Contact Us</h1>
+    <Row  className="p-5"    style={{  backgroundColor: "#333867 ", borderRadius: "5px", border: "3px solid #474d84"}}>
+    <h1 >Contact Us</h1>
         <Col xs={12} md={6}>
      
 
     
 
       <p className="pt-4">Name</p>
-    <InputGroup className="mb-2" style={{borderRadius: "5px"}}>
+    <InputGroup className="mb-2" style={{borderRadius: "5px"}} >
    
         <Form.Control
+         className="contact"
           placeholder="Enter your name..."
           aria-label="Recipient's name"
           aria-describedby="basic-addon2"
@@ -53,6 +54,7 @@ const ContactForm = () => {
     <InputGroup className="mb-4" style={{ borderRadius: "5px"}}>
    
         <Form.Control
+        className="contact"
           placeholder="Enter your email..."
           aria-label="Recipient's email"
           aria-describedby="basic-addon2"
@@ -84,7 +86,7 @@ const ContactForm = () => {
     </Col>
     </Row>
     </Container>
-</>
+</div>
   );
 }
 

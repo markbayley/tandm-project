@@ -6,6 +6,12 @@ import { Button, Nav, Col, Image, Row } from "react-bootstrap";
 import {
   Search as Searchs 
   } from "react-bootstrap-icons";
+import avatar1 from '../assets/avatar-1.png'
+import avatar2 from '../assets/avatar-2.png'
+import avatar3 from '../assets/avatar-3.png'
+import cad1 from '../assets/cad-1.png'
+import cad2 from '../assets/cad-2.png'
+import cad3 from '../assets/cad-3.png'
 
 import ToolkitProvider, {Search} from 'react-bootstrap-table2-toolkit/dist/react-bootstrap-table2-toolkit';
 import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
@@ -15,7 +21,7 @@ const { SearchBar, ClearSearchButton } = Search;
 const products = [
   {
     id: "238-4H",
-    image: <Image src="/cad-2.png" width="125px" height="90px" />,
+    image: <Image src={cad2} alt="cad-2" width="125px" height="90px" />,
     title: "Central Design 3d",
     link: (
       <Button variant="outline-warning" href="/viewer" size="md">
@@ -30,7 +36,7 @@ const products = [
     <Nav.Link>
       <Image
         className="profile-image"
-        src="/avatar.png"
+        src={avatar1}
         alt="Profile"
         height="25px"
       />
@@ -45,7 +51,7 @@ const products = [
     <Nav.Link>
       <Image
         className="profile-image"
-        src="/avatar-2.png"
+        src={avatar2}
         alt="Profile"
         height="25px"
       />
@@ -61,7 +67,7 @@ const products = [
   },
   {
     id: "368-8R",
-    image: <Image src="/cad-3.png" width="125px" height="90px" />,
+    image: <Image src={cad3} width="125px" height="90px" />,
     title: "CAD Pipe Network 1b",
     link: (
       <Button variant="outline-warning" href="/viewer" size="md">
@@ -76,7 +82,7 @@ const products = [
     <Nav.Link>
       <Image
         className="profile-image"
-        src="/avatar.png"
+        src={avatar3}
         alt="Profile"
         height="25px"
       />
@@ -93,7 +99,7 @@ const products = [
   },
   {
     id: "135-6P",
-    image: <Image src="/cad-1.png" width="125px" height="90px" />,
+    image: <Image src={cad1} width="125px" height="90px" />,
     title: "CAD Design Floor 1a",
     link: (
       <Button variant="outline-warning" href="/viewer" size="md">
@@ -108,7 +114,7 @@ const products = [
     <Nav.Link>
       <Image
         className="profile-image"
-        src="/avatar-2.png"
+        src={avatar3}
         alt="Profile"
         height="25px"
       />
@@ -123,7 +129,7 @@ const products = [
     <Nav.Link>
       <Image
         className="profile-image"
-        src="/avatar-2.png"
+        src={avatar2}
         alt="Profile"
         height="25px"
       />
@@ -140,7 +146,7 @@ const products = [
   },
   {
     id: "138-8T",
-    image: <Image src="/cad-2.png" width="125px" height="90px" />,
+    image: <Image src={cad2} width="125px" height="90px" />,
     title: "Thornton Design 1c",
     link: (
       <Button variant="outline-warning" href="/viewer" size="md">
@@ -155,7 +161,7 @@ const products = [
         <Nav.Link>
           <Image
             className="profile-image"
-            src="/avatar-2.png"
+            src={avatar2}
             alt="Profile"
             height="25px"
           />
@@ -173,7 +179,7 @@ const products = [
   },
   {
     id: "738-4R",
-    image: <Image src="/cad-1.png" width="125px" height="90px" />,
+    image: <Image src={cad1} width="125px" height="90px" />,
     title: "Thornton Design 1c",
     link: (
       <Button variant="outline-warning" href="/viewer" size="md">
@@ -188,7 +194,7 @@ const products = [
         <Nav.Link>
           <Image
             className="profile-image"
-            src="/avatar-2.png"
+            src={avatar2}
             alt="Profile"
             height="25px"
           />
@@ -203,7 +209,7 @@ const products = [
         <Nav.Link>
           <Image
             className="profile-image"
-            src="/avatar-2.png"
+            src={avatar2}
             alt="Profile"
             height="25px"
           />
@@ -221,7 +227,7 @@ const products = [
   },
   {
     id: "165-1A",
-    image: <Image src="/cad-3.png" width="125px" height="90px" />,
+    image: <Image src={cad3} width="125px" height="90px" />,
     title: "CAD Pipe Network 1b",
     link: (
       <Button variant="outline-warning" href="/viewer" size="md">
@@ -235,7 +241,7 @@ const products = [
     <Nav.Link>
       <Image
         className="profile-image"
-        src="/avatar-2.png"
+        src={avatar2}
         alt="Profile"
         height="25px"
       />

@@ -8,7 +8,7 @@ import Popover from "react-bootstrap/Popover";
 
 const popover1 = (
   <Popover id="popover-basic">
-    <Popover.Header as="h3">@ryan.james commented</Popover.Header>
+    <Popover.Header as="h3" >@ryan.james commented</Popover.Header>
     <Popover.Body>
       <em>
         {" "}
@@ -24,7 +24,7 @@ const popover2 = (
     <Popover.Body>
       <em>
         {" "}
-        "This part is<strong> amazing</strong>. It's very engaging. right?"
+        "This part is amazing. It's very engaging. right?"
       </em>
     </Popover.Body>
   </Popover>
@@ -38,7 +38,7 @@ const UpdatingPopover = React.forwardRef(
     }, [children, popper]);
 
     return (
-      <Popover ref={ref} body {...props}>
+      <Popover ref={ref} body {...props} >
         {children}
       </Popover>
     );
@@ -50,7 +50,7 @@ const longContent = (
     <strong>@sarah.smith</strong> commented: <br />
     <em>
       {" "}
-      "This part is<strong> amazing</strong>. It's very engaging. right?"
+      "This part is interesting. It's very engaging, right?"
     </em>
   </>
 );
@@ -59,7 +59,7 @@ const shortContent = (
     <strong>@sarah.smith</strong> commented: <br />
     <em>
       {" "}
-      "This part is<strong> amazing</strong>. It's very engaging. right?"
+      "This part is interesting. It's very engaging, right?"
     </em>
   </>
 );

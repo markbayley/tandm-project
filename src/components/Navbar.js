@@ -9,11 +9,12 @@ import { useUserAuth } from "../context/UserAuthContext";
 import Image from "react-bootstrap/Image";
 import Nav from "react-bootstrap/Nav";
 import {
-  HouseFill,
+  House,
   Envelope,
   Gear,
   BoxArrowInLeft,
 } from "react-bootstrap-icons";
+import avatar1 from "../assets/avatar-1.png"
 
 function NavScrollExample() {
   const { logOut, user } = useUserAuth();
@@ -50,8 +51,8 @@ function NavScrollExample() {
     >
       <Container fluid>
         <Navbar.Brand href="/" style={{ color: "#007bff" }}>
-          <HouseFill size={24} className="mb-2" />
-          Tandm.
+          <House size={24} className="mb-2" />
+          Tandm
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -71,22 +72,22 @@ function NavScrollExample() {
 
             {!user ? (
               <NavDropdown title="Products" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">CAD Design</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">
+                <NavDropdown.Item href="/error">CAD Design</NavDropdown.Item>
+                <NavDropdown.Item href="/error">
                   Building Software
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">Get A Quote</NavDropdown.Item>
+                <NavDropdown.Item href="/error">Get A Quote</NavDropdown.Item>
               </NavDropdown>
             ) : (
               " "
             )}
             {!user ? (
               <NavDropdown title="People" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">About Us</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">Team</NavDropdown.Item>
+                <NavDropdown.Item href="/error">About Us</NavDropdown.Item>
+                <NavDropdown.Item href="/error">Team</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">
+                <NavDropdown.Item href="/error">
                   Company Profile
                 </NavDropdown.Item>
               </NavDropdown>
@@ -105,7 +106,7 @@ function NavScrollExample() {
               <Modal.Title>
                 {" "}
                 <Navbar.Brand href="/" style={{ color: "#007bff" }}>
-                  <HouseFill size={24} className="mb-2" />
+                  <House size={24} className="mb-2" />
                   Tandm.
                 </Navbar.Brand>
               </Modal.Title>
@@ -142,7 +143,7 @@ function NavScrollExample() {
               <Nav.Link className="mt-0 pt-1">
                 <Image
                   className="profile-image"
-                  src="/avatar.png"
+                  src={avatar1}
                   alt="Profile"
                   height="30px"
                   roundedCircle

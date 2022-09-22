@@ -5,14 +5,13 @@ import { Link, useNavigate } from "react-router-dom";
 import { useUserAuth } from "../context/UserAuthContext";
 
 
-const Hero = () => {
+const Error = () => {
   const { user } = useUserAuth();
 
   return (
     <Container
       style={{
         display: "flex",
-
         justifyContent: "center",
         alignItems: "flex-end",
         height: "60vh",
@@ -31,7 +30,7 @@ const Hero = () => {
       <>
                       <Animated animationIn="fadeIn" animationInDuration={5000} isVisible={true}>
               <h1 className="light large" style={{ lineHeight: "0", marginBottom: "50px", color: "lightgrey" }}>
-                Building Together
+                Under Construction
                 {/* <span class="sup">&trade;</span> */}
               </h1>
               </Animated>
@@ -41,7 +40,7 @@ const Hero = () => {
                 </Button>
               </Link>
               <h5 className="mb-3 " style={{ color: "lightgrey" }}>
-                Already have an account?{" "}
+                Page under construction{" "}
                 <Link  to="/login" style={{ color: "lightgrey" }} >
                   Log in
                 </Link>
@@ -56,11 +55,11 @@ const Hero = () => {
            <>
             <Animated animationIn="fadeIn" animationInDuration={5000} isVisible={true}>
               <h1 className="light" style={{ lineHeight: "0", marginBottom: "50px", color: "lightgrey" }}>
-                Building Together
+                Under Construction
                 {/* <span class="sup">&trade;</span> */}
               </h1>
               </Animated>
-              <h5 className="mt-5 mb-3">You are signed in.</h5>
+              <h5 className="mt-5 mb-3">Page under construction.</h5>
          
               <Link to="/dashboard">
                 <Button variant="outline-warning" size="lg" className="mb-5">
@@ -75,4 +74,4 @@ const Hero = () => {
   );
 }
 
-export default Hero
+export default Error

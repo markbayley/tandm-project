@@ -11,16 +11,16 @@ import {
 export default function Footer() {
   return (
    
-    <div class="footer-dark">
+    <div className="footer-dark">
         <footer>
-            <div class="container">
-                <div class="row">
+            <Container >
+                <Row>
                     <div class="col-sm-6 col-md-3 item">
                         <h3>Services</h3>
                         <ul>
-                            <li><a href="#">CAD Design</a></li>
-                            <li><a href="#">Development</a></li>
-                            <li><a href="#">Building</a></li>
+                            <li><a href="/contact">CAD Design</a></li>
+                            <li><a href="/contact">Development</a></li>
+                            <li><a href="/contact">Building</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-6 col-md-3 item">
@@ -39,9 +39,9 @@ export default function Footer() {
                             </p>
                     </div>
                     <div class="col item social"><a href="#"> <Facebook color="white" size={20} /></a><a href="#"><Twitter class="icon ion-social-twitter" color="white" size={20} /></a><a href="#"><i class="icon ion-social-snapchat"></i><Instagram color="white" size={20} /></a><a href="#"><i class="icon ion-social-instagram"></i><Linkedin color="white" size={20} /></a></div>
-                </div>
+                </Row>
                 <p class="copyright">Tandm © 2022</p>
-            </div>
+            </Container>
         </footer>
     </div>
   )

@@ -36,6 +36,7 @@ const Login = ({ handleClose }) => {
           <h5 className="pb-3">Already have an account?</h5>
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
+          <h6 className="mb-3">Enter your Username</h6>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Control
                 type="email"
@@ -43,7 +44,7 @@ const Login = ({ handleClose }) => {
                 onChange={(e) => setEmail(e.target.value)}
               />
             </Form.Group>
-
+            <h6 className="mb-3">Enter your Password</h6>
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Control
                 type="password"
@@ -53,7 +54,7 @@ const Login = ({ handleClose }) => {
             </Form.Group>
 
             <div className="d-grid gap-2">
-              <Button variant="primary" type="Submit" onClick={handleClose}>
+              <Button variant="outline-warning" type="Submit" onClick={handleClose}>
                 Log In
               </Button>
             </div>
