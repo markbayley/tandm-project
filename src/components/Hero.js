@@ -35,15 +35,15 @@ const Hero = () => {
                 {/* <span class="sup">&trade;</span> */}
               </h1>
               </Animated>
-              <Link to="/signup">
+              <Link to="/login">
                 <Button variant="outline-warning" size="lg" className="my-4 ">
-                  SIGN IN
+                 LOG IN
                 </Button>
               </Link>
               <h5 className="mb-3 " style={{ color: "lightgrey" }}>
-                &nbsp;Already have an account?{" "}
-                <Link  to="/login" style={{ color: "lightgrey" }} >
-                  Log in
+                &nbsp;Don't have an account?{" "}
+                <Link  to="/signup" style={{ color: "lightgrey" }} >
+                  Sign up
                 </Link>
                 
                 

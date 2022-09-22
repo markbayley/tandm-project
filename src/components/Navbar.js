@@ -51,9 +51,11 @@ function NavScrollExample() {
       className={colorChange ? "navbar colorChange" : "navbar"}
     >
       <Container fluid>
-        <Navbar.Brand href="/" style={{ color: "#007bff" }}>
+        <Navbar.Brand  style={{ color: "#007bff" }}>
+          <Link to="/">
           <House size={24} className="mb-2" />
           Tandm
+          </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -64,8 +66,8 @@ function NavScrollExample() {
           >
             {user ? (
               <>
-                <Link to="/dashboard">Dashboard</Link>
-                <Link to="/viewer">CAD Viewer</Link>
+                <Link className="toplink" to="/dashboard">Dashboard</Link>
+                <Link className="toplink" to="/viewer">CAD Viewer</Link>
               </>
             ) : (
               ""
@@ -142,8 +144,8 @@ function NavScrollExample() {
               </NavDropdown>
             ) : (
               <>
-                <Link to="/contact"> Contact </Link>
-                <Link to="/login"> Login </Link>
+                <Link className="toplink" to="/contact"> Contact </Link>
+                <Link className="toplink" to="/login"> Login </Link>
               </>
             )}
             {user ? (
