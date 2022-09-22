@@ -40,7 +40,7 @@ const Error = () => {
                 </Button>
               </Link>
               <h5 className="mb-3 " style={{ color: "lightgrey" }}>
-                &nbsp;Page under construction.{" "}
+                Page under construction.{" "}
                 <Link  to="/login" style={{ color: "lightgrey" }} >
                   Log in
                 </Link>

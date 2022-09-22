@@ -41,7 +41,7 @@ const Hero = () => {
                 </Button>
               </Link>
               <h5 className="mb-3 " style={{ color: "lightgrey" }}>
-                &nbsp;Don't have an account?{" "}
+                Don't have an account?{" "}
                 <Link  to="/signup" style={{ color: "lightgrey" }} >
                   Sign up
                 </Link>
@@ -66,7 +66,7 @@ const Hero = () => {
                 <Button variant="outline-warning" size="lg" className="my-4">
                   Dashboard
                 </Button>
-                <h5 className="mb-3">&nbsp;You are signed in.</h5>
+                <h5 className="mb-3">Welcome back. You are signed in.</h5>
               </Link>
               </>
           )}
