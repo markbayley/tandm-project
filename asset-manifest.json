@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/tandm-project/static/css/main.50c654d3.css",
-    "main.js": "/tandm-project/static/js/main.14c3b43d.js",
+    "main.css": "/tandm-project/static/css/main.f0bf058c.css",
+    "main.js": "/tandm-project/static/js/main.cdf4e88b.js",
     "static/media/building.png": "/tandm-project/static/media/building.b248739bd4316493e014.png",
     "static/media/placeholder.png": "/tandm-project/static/media/placeholder.3482cde581ebcefe85b4.png",
     "static/media/cad-2.png": "/tandm-project/static/media/cad-2.a615861ac1066ee767ec.png",
@@ -11,11 +11,11 @@
     "static/media/avatar-3.png": "/tandm-project/static/media/avatar-3.787866a8311c960de433.png",
     "static/media/cad-3.png": "/tandm-project/static/media/cad-3.0cd8149ebd262964e440.png",
     "index.html": "/tandm-project/index.html",
-    "main.50c654d3.css.map": "/tandm-project/static/css/main.50c654d3.css.map",
-    "main.14c3b43d.js.map": "/tandm-project/static/js/main.14c3b43d.js.map"
+    "main.f0bf058c.css.map": "/tandm-project/static/css/main.f0bf058c.css.map",
+    "main.cdf4e88b.js.map": "/tandm-project/static/js/main.cdf4e88b.js.map"
   },
   "entrypoints": [
-    "static/css/main.50c654d3.css",
-    "static/js/main.14c3b43d.js"
+    "static/css/main.f0bf058c.css",
+    "static/js/main.cdf4e88b.js"
   ]
 }
