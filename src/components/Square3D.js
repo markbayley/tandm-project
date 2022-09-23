@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { DoubleSide } from "three";
+import { DoubleSide, ShaderMaterial, WireframeGeometry} from "three";
 import { Html, OrbitControls, PerspectiveCamera } from "@react-three/drei";
-// import "./styles.css";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Popover from "react-bootstrap/Popover";
 
 const popover1 = (
   <Popover id="popover-basic">
-    <Popover.Header as="h3" >@ryan.james commented</Popover.Header>
+
     <Popover.Body>
+      <b>@ryan.james </b> commented<br></br>
       <em>
         {" "}
         "This part is<strong> ok</strong>. Needs some work though".
@@ -20,8 +20,9 @@ const popover1 = (
 
 const popover2 = (
   <Popover id="popover-basic">
-    <Popover.Header as="h3">@sarah.smith commented</Popover.Header>
-    <Popover.Body>
+    
+    <Popover.Body >
+      <b>@sarah.smith </b> commented<br></br>
       <em>
         {" "}
         "This part is amazing. It's very engaging. right?"
@@ -79,18 +80,22 @@ export default function Square3D() {
         */}
         <group>
           {/* All these are in the same group */}
-          <GreenSquare />
+          <Box />
+          {/* <GreenSquare /> */}
           <ToolTip1 />
           <ToolTip2 />
           <ToolTip3 />
         </group>
         {/* Let there be light! */}
-        <ambientLight />
+        <ambientLight intensity={0.5} />
+		<spotLight position={[20, 5, 10]} angle={0.3} />
         {/*
           Use a PerspectiveCamera.
           PerspectiveCameras work like real works cameras
           and provide depth perception.
         */}
+     
+  
         <PerspectiveCamera position={[2, 2, 2]} makeDefault />
         {/*
           This lets you rotate the camera.
@@ -102,6 +107,46 @@ export default function Square3D() {
     </div>
   );
 }
+
+
+function Box() {
+	
+	return (
+    <>
+		<mesh 
+    position={[0, 0, 0]}
+    rotation={[Math.PI / 2, 0, 0]}
+    scale={[1.2, 1.2, 1]}
+	
+		>
+			<boxBufferGeometry attach="geometry" />
+      {/* <WireframeGeometry attach="geometry" /> */}
+			<meshLambertMaterial attach="material" color="#474d84"  emissive="#474d84" side={DoubleSide} shading={ShaderMaterial}/>
+		</mesh>
+    		<mesh 
+        position={[0, 0, 1]}
+        rotation={[Math.PI / 2, 0, 0]}
+        scale={[.1, 2, .1]}
+      
+        >
+          <cylinderBufferGeometry attach="geometry" />
+          {/* <WireframeGeometry attach="geometry" /> */}
+          <meshLambertMaterial attach="material" color="#474d84"  emissive="#474d84" side={DoubleSide} shading={ShaderMaterial}/>
+        </mesh>
+        <mesh 
+        position={[0, -1, 0]}
+        rotation={[Math.PI / 1, 0, 0]}
+        scale={[.1, 2, .1]}
+      
+        >
+          <cylinderBufferGeometry attach="geometry" />
+          {/* <WireframeGeometry attach="geometry" /> */}
+          <meshLambertMaterial attach="material" color="#474d84"  emissive="#474d84" side={DoubleSide} shading={ShaderMaterial}/>
+        </mesh>
+        </>
+	);
+}
+
 
 // This is the thing we are interested in
 // The GreenSquare component renders a mesh.
@@ -118,8 +163,9 @@ function GreenSquare() {
     <mesh
       position={[0, 0, 0]}
       rotation={[Math.PI / 2, 0, 0]}
-      scale={[1.2, 1.2, 0.5]}
+      scale={[1.2, 1.2, 0.7]}
     >
+     
       {/*
         The thing that gives the mesh its shape
         In this case the shape is a flat plane
@@ -129,7 +175,7 @@ function GreenSquare() {
         The material gives a mesh its texture or look.
         In this case, it is just a uniform green
       */}
-      <meshBasicMaterial color="#474d84" side={DoubleSide} />
+      <meshBasicMaterial color="#474d84"/>
     </mesh>
   );
 }
@@ -152,9 +198,9 @@ function ToolTip1() {
   });
 
   return (
-    <Html center position={[-1, 0, -1]}>
+    <Html center position={[0, 0, 2.05]}>
       <OverlayTrigger
-        trigger="click"
+        trigger="hover"
         placement="top"
         overlay={
           <UpdatingPopover id="popover-contained">{content}</UpdatingPopover>
@@ -173,8 +219,8 @@ function ToolTip1() {
 function ToolTip2() {
   return (
     <>
-      <Html center position={[1, -1, -1]}>
-        <OverlayTrigger trigger="click" placement="right" overlay={popover1}>
+      <Html center position={[.6, .5, -0.7]}>
+        <OverlayTrigger trigger="hover" placement="right" overlay={popover1}>
           <div style={{ cursor: "pointer" }}>
             <div className="marker">
               <strong>2</strong>
@@ -187,9 +233,10 @@ function ToolTip2() {
 }
 
 function ToolTip3() {
+ 
   return (
-    <Html center position={[-1, -1, 1]}>
-      <OverlayTrigger trigger="click" placement="left" overlay={popover2}>
+    <Html center position={[-0.6, 0.5, 0.7]} >
+      <OverlayTrigger trigger="hover" placement="left" overlay={popover2}>
         <div style={{ cursor: "pointer" }}>
         <div className="marker">
             <strong>1</strong>

@@ -24,50 +24,51 @@ const Signup = () => {
 
   return (
     <Container>
-      <Row style={{display: "flex", justifyContent: "center"}}>
-        <Col style={{maxWidth: "300px"}}>
-        <h5 className="mb-4">Sign up for an account.</h5>
-        <h6 className="mb-3">Choose a Username</h6>
-        {error && <Alert variant="danger">{error}</Alert>}
-        <Form onSubmit={handleSubmit}>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Control
-              type="email"
-              placeholder="Email address"
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </Form.Group>
-          <h6 className="mb-3">Choose a Password</h6>
-          <Form.Group className="mb-4" controlId="formBasicPassword">
-            <Form.Control
-              type="password"
-              placeholder="Password"
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </Form.Group>
-          <h6 className="mb-3 pt-1">Security token (Authorised access only)</h6>
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Control
-              type="password"
-              placeholder="Enter your key"
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </Form.Group>
+      <Row style={{ display: "flex", justifyContent: "center" }}>
+        <Col style={{ maxWidth: "300px" }}>
+          <h5 className="mb-4">Sign up for an account.</h5>
+          <h6 className="mb-3">Choose a Username</h6>
+          {error && <Alert variant="danger">{error}</Alert>}
+          <Form onSubmit={handleSubmit}>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Control
+                type="email"
+                placeholder="Email address"
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </Form.Group>
+            <h6 className="mb-3">Choose a Password</h6>
+            <Form.Group className="mb-4" controlId="formBasicPassword">
+              <Form.Control
+                type="password"
+                placeholder="Password"
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </Form.Group>
+            <h6 className="mb-3 pt-1">
+              Security token (Authorised access only)
+            </h6>
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Control
+                type="password"
+                placeholder="Enter your key"
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </Form.Group>
 
-          <div className="d-grid gap-2">
-            <Button variant="outline-warning"  type="Submit">
-              Sign up
-            </Button>
-          </div>
-        </Form>
+            <div className="d-grid gap-2">
+              <Button variant="outline-warning" type="Submit">
+                Sign up
+              </Button>
+            </div>
+          </Form>
         </Col>
       </Row>
-    
+
       <div className="p-3 box mt-0 text-center">
-      Already have an account? 
-      <Link to="/login" >   Login</Link>
-        
-            </div>
+        Already have an account?
+        <Link to="/login"> Login</Link>
+      </div>
     </Container>
   );
 };

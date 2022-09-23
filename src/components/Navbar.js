@@ -9,13 +9,8 @@ import { useUserAuth } from "../context/UserAuthContext";
 import Image from "react-bootstrap/Image";
 import Nav from "react-bootstrap/Nav";
 import { Link } from "react-router-dom";
-import {
-  House,
-  Envelope,
-  Gear,
-  BoxArrowInLeft,
-} from "react-bootstrap-icons";
-import avatar1 from "../assets/avatar-1.png"
+import { House, Envelope, Gear, BoxArrowInLeft } from "react-bootstrap-icons";
+import avatar1 from "../assets/avatar-1.png";
 
 function NavScrollExample() {
   const { logOut, user } = useUserAuth();
@@ -51,10 +46,10 @@ function NavScrollExample() {
       className={colorChange ? "navbar colorChange" : "navbar"}
     >
       <Container fluid>
-        <Navbar.Brand  style={{ color: "#007bff" }}>
+        <Navbar.Brand style={{ color: "#007bff" }}>
           <Link to="/">
-          <House size={24} className="mb-2" />
-          Tandm
+            <House size={24} className="mb-2" />
+            Tandm
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -66,8 +61,12 @@ function NavScrollExample() {
           >
             {user ? (
               <>
-                <Link className="toplink" to="/dashboard">Dashboard</Link>
-                <Link className="toplink" to="/viewer">CAD Viewer</Link>
+                <Link className="toplink" to="/dashboard">
+                  Dashboard
+                </Link>
+                <Link className="toplink" to="/viewer">
+                  CAD Viewer
+                </Link>
               </>
             ) : (
               ""
@@ -75,26 +74,31 @@ function NavScrollExample() {
 
             {!user ? (
               <NavDropdown title="Products" id="navbarScrollingDropdown">
-                <NavDropdown.Item > 
-                  <Link to="/error">CAD Design</Link></NavDropdown.Item>
-                <NavDropdown.Item >
-              <Link to="/error">Building Software</Link>
+                <NavDropdown.Item>
+                  <Link to="/error">CAD Design</Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  <Link to="/error">Building Software</Link>
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item >  
+                <NavDropdown.Item>
                   <Link to="/error">Get A Quote</Link>
-                  </NavDropdown.Item>
+                </NavDropdown.Item>
               </NavDropdown>
             ) : (
               " "
             )}
             {!user ? (
               <NavDropdown title="People" id="navbarScrollingDropdown">
-                <NavDropdown.Item ><Link to="/error">About Us</Link></NavDropdown.Item>
-                <NavDropdown.Item ><Link to="/error">Team</Link></NavDropdown.Item>
+                <NavDropdown.Item>
+                  <Link to="/error">About Us</Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  <Link to="/error">Team</Link>
+                </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item >
-                <Link to="/error">Company Profile</Link>
+                <NavDropdown.Item>
+                  <Link to="/error">Company Profile</Link>
                 </NavDropdown.Item>
               </NavDropdown>
             ) : (
@@ -112,10 +116,9 @@ function NavScrollExample() {
               <Modal.Title>
                 {" "}
                 <Navbar.Brand style={{ color: "#007bff" }}>
-                <Link to="/">
-                  <House size={24} className="mb-2" />
-               
-                  Tandm.
+                  <Link to="/">
+                    <House size={24} className="mb-2" />
+                    Tandm.
                   </Link>
                 </Navbar.Brand>
               </Modal.Title>
@@ -132,20 +135,34 @@ function NavScrollExample() {
                 align="end"
               >
                 <NavDropdown.Item>
-                <Link to="/error"> <Envelope size={20} className="mb-2" /> Messages{" "}   </Link>
+                  <Link to="/error">
+                    {" "}
+                    <Envelope size={20} className="mb-2" /> Messages{" "}
+                  </Link>
                 </NavDropdown.Item>
-                <NavDropdown.Item >
-                <Link to="/error"> <Gear size={20} className="mb-2" /> Settings{" "}   </Link>
+                <NavDropdown.Item>
+                  <Link to="/error">
+                    {" "}
+                    <Gear size={20} className="mb-2" /> Settings{" "}
+                  </Link>
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item onClick={handleLogout}>
-                 <Link to="/"><BoxArrowInLeft size={20} className="mb-2" /> Sign Out</Link> 
+                  <Link to="/">
+                    <BoxArrowInLeft size={20} className="mb-2" /> Sign Out
+                  </Link>
                 </NavDropdown.Item>
               </NavDropdown>
             ) : (
               <>
-                <Link className="toplink" to="/contact"> Contact </Link>
-                <Link className="toplink" to="/login"> Login </Link>
+                <Link className="toplink" to="/contact">
+                  {" "}
+                  Contact{" "}
+                </Link>
+                <Link className="toplink" to="/login">
+                  {" "}
+                  Login{" "}
+                </Link>
               </>
             )}
             {user ? (

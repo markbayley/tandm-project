@@ -36,7 +36,7 @@ const Login = ({ handleClose }) => {
           <h5 className="pb-3">Already have an account?</h5>
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
-          <h6 className="mb-3">Enter your Username</h6>
+            <h6 className="mb-3">Enter your Username</h6>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Control
                 type="email"
@@ -54,18 +54,17 @@ const Login = ({ handleClose }) => {
             </Form.Group>
 
             <div className="d-grid gap-2">
-              <Button variant="outline-warning" type="Submit" onClick={handleClose}>
+              <Button
+                variant="outline-warning"
+                type="Submit"
+                onClick={handleClose}
+              >
                 Log In
               </Button>
             </div>
           </Form>
           <div className="p-3 box mt-0 text-center">
-            No account?{" "}
-            <Link to="/signup">
-            
-                Sign up.
-         
-            </Link>
+            No account? <Link to="/signup">Sign up.</Link>
           </div>
         </Col>
       </Row>

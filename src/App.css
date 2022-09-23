@@ -163,7 +163,27 @@ canvas {
     border: 1px solid white;
     height: 35px;
     width: 35px;
-  }
+}
+
+.marker:hover {
+  color: #ffc107 !important;
+  border: 2px solid #ffc107 !important;
+}
+
+.marker2 {
+  text-align: center;
+  font-family: sans-serif;
+  pointer-events: none;
+  color: white;
+  padding: 5px;
+  border-radius: 50%;
+  font-size: 15px;
+  border: 1px solid white;
+  height: 35px;
+  width: 35px;
+  opacity: 0.3;
+}
+
 
 
 /* Buttons */
@@ -190,9 +210,11 @@ canvas {
   border: none !important;
 }
 
-.btn-close {
-  /* color: white !important; */
-}
+
+
+/* .modal-header .btn-close {
+  color: white !important;
+} */
 
 .arrows {
   display: flex;
@@ -310,9 +332,10 @@ button.btn.btn-default {
 .popover-body {
   background-color: #333867;
   color: #ffffff !important;
-  border: 1px solid #333867;
- 
+
 }
+
+
 
 /* Table */
 
@@ -401,6 +424,10 @@ thead, tbody, tfoot, tr, td, th {
     display: none;
   }
 
+  thead > tr > :nth-child(3) {
+   display: none;
+  }
+
   thead > tr > :nth-child(4) {
     display: none;
   }
@@ -421,6 +448,9 @@ thead, tbody, tfoot, tr, td, th {
   tbody > tr > :nth-child(1) {
     display: none;
   }
+
+
+
 
   tbody > tr > :nth-child(4) {
     display: none;
