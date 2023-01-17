@@ -15,17 +15,18 @@ import { SearchBar } from "../components/SearchBar";
 import DataTable from "../components/DataTable";
 import ImageUploader from "../components/ImageUploader";
 import { Link } from "react-router-dom";
+import DocumentUploader from "../components/DocumentUploader";
 
 
 function DocumentManager() {
 
 
   return (
-    <Container className="pt-3">
+    <Container className="pt-0" >
       {/* SubNav */}
       <Row className="mb-3">
         <Col sm={4} className="mt-0">
-          <h3 style={{ color: "grey", fontWeight: 200 }}>
+          <h3 style={{  fontWeight: 200 }}>
             Document Manager <Funnel size={20} className="" />
           </h3>
         </Col>
@@ -35,7 +36,8 @@ function DocumentManager() {
         </Col>
         {/* Search */}
        
-        <ImageUploader />
+        {/* <ImageUploader /> */}
+        <DocumentUploader />
        
         {/* <SearchBar /> */}
 

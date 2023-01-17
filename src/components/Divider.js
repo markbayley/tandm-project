@@ -16,29 +16,47 @@ export default function Divider() {
         }}
       ></Row>
       <Row
-        className="mt-5 mx-0 mb-4"
+        className="mt-5 mx-0 mb-0 pt-5"
         style={{
-          backgroundColor: "#333867",
+         
           borderRadius: "5px",
-          color: "#ffffff",
+          color: "white",
           width: "100vw",
           textAlign: "center",
         }}
       >
-        <Col className=" light p-5 med ">
-          <Laptop className="my-2" color="#ffc107" size={50} />
+       <h2 id="subheader" style={{fontSize: "32px"}}> "A name you can trust in building software - Peter Hughs"</h2>
+        <Col className=" light px-5 med ">
+          <div className="icon-box">
+          <Laptop className="my-2 p-2" color="#ffc107" size={100} style={{border: "5px solid white", borderRadius: "50%"}} />
           <br />
           CAD Design{" "}
+          </div>
         </Col>
-        <Col className=" light p-5 med">
-          <Building className="my-2" color="#ffc107" size={50} />
+        <Col className=" light px-5 med">
+        <div className="icon-box">
+          <Building className="my-2 p-2 " color="#ffc107" size={100} style={{border: "5px solid white", borderRadius: "50%"}}/>
+          <br />
+          Consulting
+          </div>
+        </Col>
+        <Col className=" light px-5 med">
+        <div className="icon-box">
+          <Building className="my-2 p-2 " color="#ffc107" size={100} style={{border: "5px solid white", borderRadius: "50%"}}/>
           <br />
           Building Layouts
+    
+          </div>
         </Col>
-        <Col className=" light p-5 med">
-          <House className="my-2" color="#ffc107" size={50} />
+    
+        <Col className=" light px-5 med">
+        <div className="icon-box">
+          <House className="my-2 p-2" color="#ffc107" size={100} style={{border: "5px solid white", borderRadius: "50%"}} />
           <br />
-          Specialty Software
+          More
+         
+          </div>
+      
         </Col>
 
         {/* <Col  >

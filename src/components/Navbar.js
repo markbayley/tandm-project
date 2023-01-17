@@ -12,7 +12,12 @@ import { Link } from "react-router-dom";
 import { House, Envelope, Gear, BoxArrowInLeft } from "react-bootstrap-icons";
 import avatar1 from "../assets/avatar-1.png";
 
+import { useAuth } from "../firebase-config";
+
 function NavScrollExample() {
+  const currentUser = useAuth();
+
+
   const { logOut, user } = useUserAuth();
   const navigate = useNavigate();
   const handleLogout = async () => {
@@ -141,7 +146,7 @@ function NavScrollExample() {
                   </Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item>
-                  <Link to="/error">
+                  <Link to="/settings">
                     {" "}
                     <Gear size={20} className="mb-2" /> Settings{" "}
                   </Link>
@@ -169,11 +174,12 @@ function NavScrollExample() {
               <Link to="/" className="mt-0 pt-1">
                 <Image
                   className="profile-image"
-                  src={avatar1}
+                  src={currentUser? currentUser.photoURL : null}
                   alt="Profile"
                   height="30px"
                   roundedCircle
                 />
+             
               </Link>
             ) : (
               ""

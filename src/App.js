@@ -11,6 +11,7 @@ import DocumentManager from "./pages/DocumentManager";
 import DocumentViewer from "./pages/DocumentViewer";
 import Contact from "./pages/Contact";
 import Error from './components/Error';
+import Settings from './pages/Settings';
 // import Loading from './components/Loading';
 
 
@@ -20,7 +21,7 @@ function App() {
  
 
   return (
-    <>
+    <body>
    
       <UserAuthContextProvider>
         <Navbar />
@@ -41,6 +42,14 @@ function App() {
               </ProtectedRoute>
             }
           />
+           <Route
+            path="/settings"
+            element={
+              <ProtectedRoute>
+                <Settings />
+              </ProtectedRoute>
+            }
+          />
          
           <Route exact path="/" element={<Home />} />
           <Route path="/signup" element={<Signup />} />
@@ -52,7 +61,7 @@ function App() {
       </UserAuthContextProvider>
    
  
-  </>
+  </body>
   );
 }
 

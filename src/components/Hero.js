@@ -20,8 +20,9 @@ const Hero = () => {
     >
       <Row>
         <Col>
-          <Row style={{ fontSize: "110px", color: "#007bff", fontWeight: 600 }}>
-            Tandm
+          <Row style={{ fontSize: "95px", color: "#ffffff", fontWeight: 700 }}>
+         
+            TANDM
           </Row>
 
           {!user ? (
@@ -31,6 +32,7 @@ const Hero = () => {
                 animationInDuration={5000}
                 isVisible={true}
               >
+                    
                 <h1
                   className="light large"
                   style={{
@@ -39,7 +41,7 @@ const Hero = () => {
                     color: "lightgrey",
                   }}
                 >
-                  Building Together
+              <span id="subheader">Building Together</span>
                   {/* <span class="sup">&trade;</span> */}
                 </h1>
               </Animated>
@@ -48,10 +50,10 @@ const Hero = () => {
                   LOG IN
                 </Button>
               </Link>
-              <h5 className="mb-3 " style={{ color: "lightgrey" }}>
+              <h5 className="mb-3 ">
                 Don't have an account?{" "}
-                <Link to="/signup" style={{ color: "lightgrey" }}>
-                  Sign up
+                <Link to="/signup">
+                  <span  style={{ color: "goldenrod" }}>Sign up</span>
                 </Link>
               </h5>
             </>
@@ -70,7 +72,7 @@ const Hero = () => {
                     color: "lightgrey",
                   }}
                 >
-                  Building Together
+                   <span id="subheader">Building Together</span>
                   {/* <span class="sup">&trade;</span> */}
                 </h1>
               </Animated>

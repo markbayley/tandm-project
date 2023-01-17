@@ -45,7 +45,7 @@ const Signup = () => {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </Form.Group>
-            <h6 className="mb-3 pt-1">
+            {/* <h6 className="mb-3 pt-1">
               Security token (Authorised access only)
             </h6>
             <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -54,10 +54,10 @@ const Signup = () => {
                 placeholder="Enter your key"
                 onChange={(e) => setPassword(e.target.value)}
               />
-            </Form.Group>
+            </Form.Group> */}
 
             <div className="d-grid gap-2">
-              <Button variant="outline-warning" type="Submit">
+              <Button variant="outline-warning" type="Submit" >
                 Sign up
               </Button>
             </div>

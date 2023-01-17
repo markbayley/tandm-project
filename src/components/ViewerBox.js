@@ -11,7 +11,7 @@ import {
   Wrench,
   SaveFill,
 } from "react-bootstrap-icons";
-import { Button, Col } from "react-bootstrap";
+import { Button, Col, Row } from "react-bootstrap";
 
 const ViewerBox = () => {
   return (
@@ -26,6 +26,17 @@ const ViewerBox = () => {
         borderRadius: "5px",
       }}
     >
+              <Row  className="mt-2 "
+        style={{
+          display: "flex",
+        justifyContent: "center",
+        width: "350px",
+          position: "absolute",
+          zIndex: 1,
+          color: "#ffc107"
+    
+        }}>  Cad Pipe Network 1AH-D2
+        </Row>
       {/* ToolBox */}
       <Col
         className="mt-2 "
@@ -70,9 +81,13 @@ const ViewerBox = () => {
           {" "}
           <SaveFill color="white" size={20} />{" "}
         </Button>
+ 
       </Col>
+ 
       {/* 3D Image */}
       <Square3D />{" "}
+
+     
     </Col>
   );
 };

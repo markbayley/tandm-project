@@ -16,11 +16,11 @@ const DocumentViewer = () => {
   return (
     <>
 
-    <Container className="pt-3">
+    <Container className="pt-0">
       {/* SubNav */}
       <Row className="mb-2">
         <Col sm={3} className="mt-0">
-          <h3 style={{ color: "grey", fontWeight: 200 }}>
+          <h3 style={{  fontWeight: 200 }}>
             Document Viewer <Search size={20} className="" />
           </h3>
         </Col>

@@ -22,17 +22,17 @@ export default function AboutUs() {
         animationInDuration="1500"
         isVisible={true}
       >
-        <div style={{ marginLeft: "30px" }}>
-          <House size={130} color="#333867" />
+        <div style={{ marginLeft: "30px", height: "10em" }}>
+          {/* <House size={130} color="#333867" /> */}
         </div>
         <Row
           className="mt-0 p-5"
-          style={{ backgroundColor: "#333867", borderRadius: "5px" }}
+          style={{ backgroundColor: "#ffffff", borderRadius: "5px" }}
         >
           <Col>
             <div>
               <div className="mb-5" style={{ color: "#8a8fba" }}>
-                <span className="light large">Software for </span>{" "}
+                <span className="light">Software for </span>{" "}
                 <span className="heavy">
                   {" "}
                   Architects, <br />
@@ -40,9 +40,9 @@ export default function AboutUs() {
                 </span>
               </div>
 
-              <h5 className="mb-3 " style={{ color: "lightgrey" }}>
+              <h5 className="mb-3 " style={{ color: "grey" }}>
                 Need more information?{" "}
-                <Link style={{ color: "lightgrey" }} to="/contact">
+                <Link style={{ color: "grey" }} to="/contact">
                   Contact us
                 </Link>
                 .

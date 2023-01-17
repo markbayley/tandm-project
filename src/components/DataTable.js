@@ -298,7 +298,8 @@ export default function DataTable() {
     <Col
       sm={12}
       style={{
-        backgroundColor: "#222548",
+        //  backgroundColor: "#222548",
+                backgroundColor: "#282d32",
         borderColor: "#222548",
         borderRadius: "7px",
         paddingLeft: "0px",

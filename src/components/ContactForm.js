@@ -50,8 +50,8 @@ const ContactForm = () => {
         <Row
           className="p-5"
           style={{
-            backgroundColor: "#333867 ",
-            borderRadius: "5px",
+            // backgroundColor: "#333867 ",
+            // borderRadius: "5px",
             // border: "3px solid #474d84",
           }}
         >
