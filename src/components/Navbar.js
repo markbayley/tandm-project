@@ -43,6 +43,8 @@ function NavScrollExample() {
   };
   window.addEventListener("scroll", changeNavbarColor);
 
+  console.log(currentUser, "currentUser")
+
   return (
     <Navbar
       style={{ borderBottom: "" }}
@@ -174,7 +176,8 @@ function NavScrollExample() {
               <Link to="/" className="mt-0 pt-1">
                 <Image
                   className="profile-image"
-                  src={currentUser? currentUser.photoURL : null}
+                  src={currentUser? "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"}
+                  //src={currentUser? currentUser.photoURL : null}
                   alt="Profile"
                   height="30px"
                   roundedCircle
